@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #07090e;
+    --color-surface: #0e131f;
+    --color-surface-hover: #141c2e;
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-accent: #06b6d4; /* cyan */
+    --color-accent-glow: rgba(6, 182, 212, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: var(--color-bg);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-bg);
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* 3D and Perspective utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Dynamic 3D Card Hover Effects */
+.card-3d-hover {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-3d-hover:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 24px 48px -12px rgba(6, 182, 212, 0.25), 0 0 25px rgba(6, 182, 212, 0.15);
+}
+
+.card-3d-hover-subtle {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  transform-style: preserve-3d;
+}
+
+.card-3d-hover-subtle:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 32px -10px rgba(6, 182, 212, 0.2);
+}
+
+/* 3D Slide Carousel Keyframes */
+@keyframes slideInRight3D {
+  0% {
+    opacity: 0;
+    transform: translateX(60px) translateZ(-100px) rotateY(-20deg) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateZ(40px) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes slideInLeft3D {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) translateZ(-100px) rotateY(20deg) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateZ(40px) rotateY(0deg) scale(1);
+  }
+}
+
+.animate-slide-in-right-3d {
+  animation: slideInRight3D 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-in-left-3d {
+  animation: slideInLeft3D 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Cyber mesh background */
+.bg-cyber-grid {
+  background-image: radial-gradient(rgba(14, 165, 233, 0.09) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.3);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.3);
+}
+
+.glass-glow-cyan {
+  box-shadow: 0 0 30px -4px rgba(6, 182, 212, 0.35);
+}
+
+.glass-glow-teal {
+  box-shadow: 0 0 30px -4px rgba(20, 184, 166, 0.35);
+}
+
+.glass-glow-gold {
+  box-shadow: 0 0 30px -4px rgba(245, 166, 35, 0.35);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00e5c8 0%, #38bdf8 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #f5a623 0%, #fbbf24 60%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float3d 6s ease-in-out infinite;
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeReverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Print Styles for Clean Recruiter Resume Export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  nav, footer, .no-print, button:not(.print-allow) {
+    display: none !important;
+  }
+}

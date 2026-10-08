@@ -1,0 +1,109 @@
+import React, { useState } from 'react';
+import { JOURNEY_MILESTONES } from '../data/portfolioData';
+import { Sparkles, ArrowRight, CheckCircle2, GitCommit, ChevronRight } from 'lucide-react';
+
+export const JourneySection: React.FC = () => {
+  const [selectedMilestone, setSelectedMilestone] = useState<string>(JOURNEY_MILESTONES[0].id);
+
+  const activeData = JOURNEY_MILESTONES.find((m) => m.id === selectedMilestone) || JOURNEY_MILESTONES[0];
+
+  return (
+    <section id="journey" className="py-20 relative bg-[#080d16]/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="flex flex-col mb-12">
+          <div className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">
+            Engineering Evolution
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+            My Learning & Engineering Journey
+          </h2>
+          <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded mt-3" />
+          <p className="text-sm text-slate-400 mt-3 max-w-2xl">
+            Click on any milestone to trace the technical progression from Computer Science foundations to production software engineering, RAG, and Agentic AI.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Milestone Selector List */}
+          <div className="lg:col-span-5 space-y-2">
+            {JOURNEY_MILESTONES.map((m, idx) => {
+              const isSelected = m.id === selectedMilestone;
+              return (
+                <button
+                  key={m.id}
+                  type="button"
+                  onClick={() => setSelectedMilestone(m.id)}
+                  className={`w-full text-left p-4 rounded-xl transition-all duration-200 border flex items-center justify-between cursor-pointer ${
+                    isSelected
+                      ? 'bg-cyan-950/40 border-cyan-500/50 shadow-md shadow-cyan-950/20 text-white'
+                      : 'bg-[#0c111e] border-white/[0.04] text-slate-400 hover:text-white hover:bg-[#111728]'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`w-6 h-6 rounded-full font-mono text-xs flex items-center justify-center shrink-0 ${
+                        isSelected
+                          ? 'bg-cyan-400 text-slate-900 font-bold'
+                          : 'bg-white/[0.05] text-slate-400'
+                      }`}
+                    >
+                      {idx + 1}
+                    </span>
+                    <div>
+                      <div className="text-sm font-semibold">{m.title}</div>
+                      <div className="text-[11px] font-mono text-cyan-400/80">{m.phase}</div>
+                    </div>
+                  </div>
+                  <ChevronRight
+                    className={`w-4 h-4 transition-transform ${
+                      isSelected ? 'text-cyan-400 translate-x-1' : 'text-slate-600'
+                    }`}
+                  />
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Active Milestone Deep Dive Card */}
+          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#0c111e] border border-cyan-500/30 shadow-xl relative min-h-[320px] flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+                  {activeData.phase}
+                </span>
+                <span className="text-xs font-mono text-slate-500">
+                  Milestone Focus
+                </span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
+                {activeData.title}
+              </h3>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                {activeData.description}
+              </p>
+            </div>
+
+            <div className="pt-5 border-t border-white/[0.06]">
+              <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2.5">
+                Key Technologies & Competencies
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {activeData.technologies.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="text-xs font-mono px-3 py-1 rounded bg-[#10192e] text-cyan-300 border border-cyan-800/30"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
