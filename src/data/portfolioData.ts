@@ -12,6 +12,7 @@ export const PERSONAL_INFO = {
   phone: '+91 9944335406',
   github: 'https://github.com/Rithi-20',
   linkedin: 'https://www.linkedin.com/in/rithiha-u/',
+  leetcode: 'https://leetcode.com/u/rithi_2007/',
   headline: 'Engineering Practical AI, Multi-Agent Systems & Production APIs',
   subheading:
     'Computer Science graduate with hands-on production experience developing AI voice agents with ElevenLabs, ML anomaly detection pipelines, LLM copilots with FastAPI & Qwen2.5, and peer-reviewed environmental AI presented at IEEE ICESCS 2025.',
@@ -32,7 +33,7 @@ export const PERSONAL_INFO = {
 export const QUICK_STATS = [
   { value: '8.42', label: 'B.E. CSE CGPA', subtext: 'Dr. N.G.P. Institute of Technology' },
   { value: '9 Months', label: 'Industry Dev Exp', subtext: 'Fuzionest (3m Intern + 6m Pro)' },
-  { value: '17+', label: 'Built Repositories', subtext: 'AI, ML, RAG, Web & Agents' },
+  { value: '20+', label: 'Projects Built', subtext: 'AI, ML, RAG, Web & Analytics' },
   { value: 'IEEE', label: 'Published Research', subtext: 'Presenter at IEEE ICESCS 2025' }
 ];
 

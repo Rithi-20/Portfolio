@@ -129,6 +129,7 @@ export const SkillsSection: React.FC = () => {
         { name: 'Python', desc: 'Primary language for AI, ML & backend services' },
         { name: 'JavaScript', desc: 'Modern web scripting & asynchronous logic' },
         { name: 'Java', desc: 'Object-oriented programming & data structures' },
+        { name: 'Data Structures & Algorithms', desc: 'Algorithmic problem solving on LeetCode (@rithi_2007)' },
         { name: 'HTML5 & CSS3', desc: 'Accessible, responsive semantic structures' }
       ]
     },

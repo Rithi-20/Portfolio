@@ -1,6 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Github, Linkedin, Mail, MapPin, ArrowUp } from 'lucide-react';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -50,6 +51,16 @@ export const Footer: React.FC = () => {
             >
               <Linkedin className="w-4 h-4 text-violet-400" />
               <span>LinkedIn</span>
+            </a>
+            <span className="text-slate-700">·</span>
+            <a
+              href={PERSONAL_INFO.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-amber-300 transition-colors"
+            >
+              <LeetCodeIcon className="w-4 h-4 text-amber-400" />
+              <span>LeetCode</span>
             </a>
             <span className="text-slate-700">·</span>
             <a

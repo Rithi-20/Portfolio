@@ -11,6 +11,7 @@ import {
   Linkedin
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 export const AboutSection: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -126,6 +127,15 @@ export const AboutSection: React.FC = () => {
               >
                 <Linkedin className="w-3.5 h-3.5 text-violet-400" />
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href={PERSONAL_INFO.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono text-purple-200 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-purple-500/20 hover:border-amber-400/50 transition-colors"
+              >
+                <LeetCodeIcon className="w-3.5 h-3.5 text-amber-400" />
+                <span>LeetCode</span>
               </a>
             </div>
           </div>

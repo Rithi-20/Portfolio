@@ -472,7 +472,7 @@ export const ProjectsSection: React.FC = () => {
                     onClick={() => setViewMode('grid')}
                     className="text-xs font-mono text-purple-300/70 hover:text-violet-300 transition-colors cursor-pointer flex items-center gap-1"
                   >
-                    <span>View all 17 as Grid</span>
+                    <span>View all {ALL_PROJECTS.length} as Grid</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Box, Send, Download, ArrowRight, MapPin } from 'lucide-react';
-import { PERSONAL_INFO } from '../data/portfolioData';
+import { PERSONAL_INFO, ALL_PROJECTS } from '../data/portfolioData';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 interface HeroSectionProps {
   onOpenResume: () => void;
@@ -41,8 +42,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
       subtext: 'Fuzionest (3m Intern + 6m Pro)'
     },
     {
-      value: '17+',
-      label: 'Built Repositories',
+      value: '20+',
+      label: 'Projects Built',
       subtext: 'AI, ML & Web Systems'
     },
     {
@@ -123,7 +124,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:opacity-95 transition-all duration-200 shadow-xl shadow-violet-500/25 hover:shadow-violet-400/40 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <Box className="w-4 h-4" />
-            <span>Explore 3D Projects (17)</span>
+            <span>Explore 3D Projects (20+)</span>
             <ArrowRight className="w-4 h-4 ml-1" />
           </button>
 
@@ -146,31 +147,41 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
           </button>
         </div>
 
-        {/* Social Footprint Bar - Centered */}
-        <div className="flex flex-wrap items-center justify-center gap-5 pt-4 border-t border-purple-500/15 text-xs font-mono text-purple-300/70 w-full max-w-xl">
-          <div className="flex items-center gap-1.5 text-violet-400">
+        {/* Social Footprint Bar - Centered on Single Line */}
+        <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-2.5 sm:gap-4 md:gap-5 pt-4 border-t border-purple-500/15 text-xs font-mono text-purple-300/70 w-full max-w-4xl whitespace-nowrap">
+          <div className="flex items-center gap-1.5 text-violet-400 shrink-0">
             <MapPin className="w-3.5 h-3.5" />
             <span>{PERSONAL_INFO.location}</span>
           </div>
-          <span className="text-purple-800 hidden sm:inline">·</span>
+          <span className="text-purple-800 shrink-0">·</span>
           <a
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-purple-200/80 hover:text-violet-300 transition-colors"
+            className="inline-flex items-center gap-1.5 text-purple-200/80 hover:text-violet-300 transition-colors shrink-0"
           >
             <Github className="w-4 h-4" />
             <span>GitHub (Rithi-20)</span>
           </a>
-          <span className="text-purple-800 hidden sm:inline">·</span>
+          <span className="text-purple-800 shrink-0">·</span>
           <a
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-purple-200/80 hover:text-violet-300 transition-colors"
+            className="inline-flex items-center gap-1.5 text-purple-200/80 hover:text-violet-300 transition-colors shrink-0"
           >
             <Linkedin className="w-3.5 h-3.5 text-violet-400" />
             <span>LinkedIn</span>
+          </a>
+          <span className="text-purple-800 shrink-0">·</span>
+          <a
+            href={PERSONAL_INFO.leetcode}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-purple-200/80 hover:text-amber-300 transition-colors shrink-0"
+          >
+            <LeetCodeIcon className="w-3.5 h-3.5 text-amber-400" />
+            <span>LeetCode</span>
           </a>
         </div>
       </div>

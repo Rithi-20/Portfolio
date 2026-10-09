@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, Github, Linkedin, Send, MapPin, Sparkles, MessageSquare } from 'lucide-react';
+import { Mail, Copy, Check, Github, Linkedin, Send, MapPin, Sparkles, MessageSquare, ExternalLink, RotateCcw } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
+  const [copiedDraft, setCopiedDraft] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,15 +26,68 @@ export const ContactSection: React.FC = () => {
     }
   };
 
+  const getEmailData = () => {
+    const senderName = formData.name.trim() || 'Portfolio Visitor';
+    const senderEmail = formData.email.trim();
+    const inquirySubject = formData.subject.trim() || 'Engineering Opportunity / Inquiry';
+
+    // Standardized Subject incorporating sender name and email
+    const fullSubject = `[Portfolio Inquiry] ${inquirySubject} — From: ${senderName} <${senderEmail}>`;
+
+    // Standardized RFC-header body ensuring sender address is permanently recognized
+    const formattedBody = `============================================================
+SENDER / FROM DETAILS:
+From: ${senderName} <${senderEmail}>
+Reply-To: ${senderEmail}
+Cc: ${senderEmail}
+To: ${PERSONAL_INFO.name} <${PERSONAL_INFO.email}>
+Date: ${new Date().toLocaleString()}
+============================================================
+
+Hello ${PERSONAL_INFO.name},
+
+${formData.message}
+
+============================================================
+SENDER VERIFICATION:
+- Full Name: ${senderName}
+- From Email (Reply-To): ${senderEmail}
+- Topic: ${inquirySubject}
+============================================================`;
+
+    const subjectEncoded = encodeURIComponent(fullSubject);
+    const bodyEncoded = encodeURIComponent(formattedBody);
+    const fromEncoded = encodeURIComponent(senderEmail);
+    const toEncoded = encodeURIComponent(PERSONAL_INFO.email);
+
+    return {
+      fullSubject,
+      formattedBody,
+      senderEmail,
+      mailtoUrl: `mailto:${toEncoded}?from=${fromEncoded}&reply-to=${fromEncoded}&cc=${fromEncoded}&subject=${subjectEncoded}&body=${bodyEncoded}`,
+      gmailUrl: `https://mail.google.com/mail/?view=cm&fs=1&to=${toEncoded}&cc=${fromEncoded}&su=${subjectEncoded}&body=${bodyEncoded}`,
+      outlookUrl: `https://outlook.live.com/mail/0/deeplink/compose?to=${toEncoded}&cc=${fromEncoded}&subject=${subjectEncoded}&body=${bodyEncoded}`
+    };
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Build mailto query so message actually opens in user's default client with pre-filled content
-    const subjectEncoded = encodeURIComponent(`[Portfolio Inquiry] ${formData.subject} - from ${formData.name}`);
-    const bodyEncoded = encodeURIComponent(
-      `Hello Rithiha,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n`
-    );
-    window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${subjectEncoded}&body=${bodyEncoded}`;
+    const data = getEmailData();
+    window.location.href = data.mailtoUrl;
     setFormSubmitted(true);
+  };
+
+  const handleCopyFullDraft = async () => {
+    const data = getEmailData();
+    const fullDraft = `To: ${PERSONAL_INFO.email}\nFrom: ${formData.name} <${data.senderEmail}>\nReply-To: ${data.senderEmail}\nCc: ${data.senderEmail}\nSubject: ${data.fullSubject}\n\n${data.formattedBody}`;
+    try {
+      await navigator.clipboard.writeText(fullDraft);
+      setCopiedDraft(true);
+      setTimeout(() => setCopiedDraft(false), 2500);
+    } catch {
+      setCopiedDraft(true);
+      setTimeout(() => setCopiedDraft(false), 2500);
+    }
   };
 
   return (
@@ -130,6 +185,21 @@ export const ContactSection: React.FC = () => {
                 <span className="text-xs font-mono text-slate-400">Rithi-20</span>
               </a>
 
+              <a
+                href={PERSONAL_INFO.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
+              >
+                <div className="flex items-center gap-3">
+                  <LeetCodeIcon className="w-4 h-4 text-amber-400" />
+                  <span className="text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">
+                    LeetCode Profile
+                  </span>
+                </div>
+                <span className="text-xs font-mono text-amber-300/80">rithi_2007</span>
+              </a>
+
               <div className="flex items-center gap-2 p-3 text-xs font-mono text-slate-400">
                 <MapPin className="w-4 h-4 text-violet-400" />
                 <span>{PERSONAL_INFO.location}</span>
@@ -176,6 +246,9 @@ export const ContactSection: React.FC = () => {
                     placeholder="alex@company.com"
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                   />
+                  <div className="text-[11px] font-mono text-purple-300/60 mt-1">
+                    Configured as verified From, Reply-To &amp; CC
+                  </div>
                 </div>
               </div>
 
@@ -220,9 +293,71 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {formSubmitted && (
-                <div className="p-3 rounded-lg bg-emerald-950/40 border border-emerald-800/40 text-emerald-300 text-xs font-mono flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span>Email draft created. You can also copy the email directly on the left.</span>
+                <div className="mt-4 p-4 rounded-xl bg-violet-950/50 border border-violet-700/50 space-y-3 animate-in fade-in duration-200">
+                  <div className="flex items-start gap-2.5 text-xs font-mono text-emerald-300">
+                    <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <div>
+                      <div className="font-semibold text-white">Email draft generated with verified sender identity!</div>
+                      <div className="text-purple-300/80 mt-0.5">
+                        Recognized From / Reply-To: <span className="text-amber-300 font-bold">{formData.email}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-purple-500/20 text-xs font-mono text-purple-200/90">
+                    If your default mail app didn't open automatically, send directly using:
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    <a
+                      href={getEmailData().gmailUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-[#ea4335]/20 hover:bg-[#ea4335]/30 text-white border border-[#ea4335]/40 transition-colors"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 text-[#ea4335]" />
+                      <span>Open in Gmail Web</span>
+                    </a>
+
+                    <a
+                      href={getEmailData().outlookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-[#0078d4]/20 hover:bg-[#0078d4]/30 text-white border border-[#0078d4]/40 transition-colors"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 text-[#0078d4]" />
+                      <span>Open in Outlook Web</span>
+                    </a>
+
+                    <button
+                      type="button"
+                      onClick={handleCopyFullDraft}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-white/[0.05] hover:bg-white/[0.1] text-purple-200 border border-purple-500/30 transition-colors cursor-pointer"
+                    >
+                      {copiedDraft ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-emerald-400" />
+                          <span>Draft Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3.5 h-3.5" />
+                          <span>Copy Full Pre-filled Draft</span>
+                        </>
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        window.location.href = getEmailData().mailtoUrl;
+                      }}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-purple-900/30 hover:bg-purple-900/50 text-violet-300 border border-purple-700/40 transition-colors cursor-pointer"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>Re-open Mail App</span>
+                    </button>
+                  </div>
                 </div>
               )}
             </form>

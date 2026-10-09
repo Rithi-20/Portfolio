@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText, ExternalLink, Github, Linkedin } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 interface NavbarProps {
   onOpenCommand: () => void;
@@ -146,6 +147,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                 <span>LinkedIn</span>
               </a>
 
+              {/* LeetCode Profile Link */}
+              <a
+                href={PERSONAL_INFO.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode Profile"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-amber-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
+                title="LeetCode"
+              >
+                <LeetCodeIcon className="w-3.5 h-3.5 text-amber-400" />
+                <span>LeetCode</span>
+              </a>
+
               {/* Resume CTA */}
               <button
                 type="button"
@@ -192,24 +206,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                 );
               })}
 
-              <div className="pt-4 mt-2 border-t border-purple-500/20 flex items-center gap-3">
+              <div className="pt-4 mt-2 border-t border-purple-500/20 grid grid-cols-3 gap-2">
                 <a
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-mono text-purple-200 bg-[#160f29] border border-purple-500/20 hover:text-white"
+                  className="flex items-center justify-center gap-1.5 px-2 py-2.5 rounded-lg text-xs font-mono text-purple-200 bg-[#160f29] border border-purple-500/20 hover:text-white"
                 >
-                  <Github className="w-4 h-4 text-violet-400" />
+                  <Github className="w-3.5 h-3.5 text-violet-400" />
                   <span>GitHub</span>
                 </a>
                 <a
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-mono text-purple-200 bg-[#160f29] border border-purple-500/20 hover:text-white"
+                  className="flex items-center justify-center gap-1.5 px-2 py-2.5 rounded-lg text-xs font-mono text-purple-200 bg-[#160f29] border border-purple-500/20 hover:text-white"
                 >
-                  <Linkedin className="w-4 h-4 text-violet-400" />
+                  <Linkedin className="w-3.5 h-3.5 text-violet-400" />
                   <span>LinkedIn</span>
+                </a>
+                <a
+                  href={PERSONAL_INFO.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-1.5 px-2 py-2.5 rounded-lg text-xs font-mono text-purple-200 bg-[#160f29] border border-purple-500/20 hover:text-white"
+                >
+                  <LeetCodeIcon className="w-3.5 h-3.5 text-amber-400" />
+                  <span>LeetCode</span>
                 </a>
               </div>
               <div className="flex items-center justify-between text-xs text-purple-300/70 px-2 pt-2 font-mono">

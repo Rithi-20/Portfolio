@@ -38,6 +38,7 @@ Email: ${PERSONAL_INFO.email}
 Location: ${PERSONAL_INFO.location}
 GitHub: ${PERSONAL_INFO.github}
 LinkedIn: ${PERSONAL_INFO.linkedin}
+LeetCode: ${PERSONAL_INFO.leetcode}
 
 PROFESSIONAL SUMMARY:
 ${PERSONAL_INFO.aboutBio}
@@ -156,6 +157,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
                 <div>{PERSONAL_INFO.location}</div>
                 <div className="text-violet-400">{PERSONAL_INFO.github}</div>
                 <div className="text-purple-300">{PERSONAL_INFO.linkedin}</div>
+                <div className="text-amber-400/90">{PERSONAL_INFO.leetcode}</div>
               </div>
             </div>
           </div>

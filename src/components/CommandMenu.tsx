@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Home, FolderGit2, Wrench, Briefcase, Mail, Github, FileText, X, ArrowRight, Copy, Check } from 'lucide-react';
+import { Search, Home, FolderGit2, Wrench, Briefcase, Mail, Github, Linkedin, FileText, X, ArrowRight, Copy, Check } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { LeetCodeIcon } from './LeetCodeIcon';
 
 interface CommandMenuProps {
   isOpen: boolean;
@@ -104,6 +105,26 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
       action: () => {
         onClose();
         window.open(PERSONAL_INFO.github, '_blank');
+      }
+    },
+    {
+      id: 'linkedin',
+      name: 'Open LinkedIn Profile',
+      category: 'External',
+      icon: <Linkedin className="w-4 h-4 text-violet-400" />,
+      action: () => {
+        onClose();
+        window.open(PERSONAL_INFO.linkedin, '_blank');
+      }
+    },
+    {
+      id: 'leetcode',
+      name: 'Open LeetCode Profile (@rithi_2007)',
+      category: 'External',
+      icon: <LeetCodeIcon className="w-4 h-4 text-amber-400" />,
+      action: () => {
+        onClose();
+        window.open(PERSONAL_INFO.leetcode, '_blank');
       }
     },
     {
