@@ -2,12 +2,12 @@
 
 @layer base {
   :root {
-    --color-bg: #07090e;
-    --color-surface: #0e131f;
-    --color-surface-hover: #141c2e;
-    --color-border: rgba(255, 255, 255, 0.08);
-    --color-accent: #06b6d4; /* cyan */
-    --color-accent-glow: rgba(6, 182, 212, 0.15);
+    --color-bg: #0c0816;
+    --color-surface: #140e24;
+    --color-surface-hover: #1c1432;
+    --color-border: rgba(216, 180, 254, 0.1);
+    --color-accent: #c084fc; /* light violet */
+    --color-accent-glow: rgba(192, 132, 252, 0.2);
   }
 
   html {
@@ -19,7 +19,7 @@
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: var(--color-bg);
-    color: #e2e8f0;
+    color: #f3e8ff;
     overflow-x: hidden;
   }
 
@@ -34,16 +34,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #0d0817;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #2e1b4d;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #7c3aed;
 }
 
 /* 3D and Perspective utilities */
@@ -75,7 +75,7 @@
 
 .card-3d-hover:hover {
   transform: translateY(-8px) scale(1.015);
-  box-shadow: 0 24px 48px -12px rgba(6, 182, 212, 0.25), 0 0 25px rgba(6, 182, 212, 0.15);
+  box-shadow: 0 24px 48px -12px rgba(192, 132, 252, 0.25), 0 0 25px rgba(192, 132, 252, 0.18);
 }
 
 .card-3d-hover-subtle {
@@ -85,7 +85,7 @@
 
 .card-3d-hover-subtle:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 16px 32px -10px rgba(6, 182, 212, 0.2);
+  box-shadow: 0 16px 32px -10px rgba(192, 132, 252, 0.22);
 }
 
 /* 3D Slide Carousel Keyframes */
@@ -121,25 +121,25 @@
 
 /* Cyber mesh background */
 .bg-cyber-grid {
-  background-image: radial-gradient(rgba(14, 165, 233, 0.09) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(192, 132, 252, 0.11) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 /* Glow effects */
-.glow-cyan {
-  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.3);
+.glow-cyan, .glow-violet {
+  box-shadow: 0 0 35px -5px rgba(192, 132, 252, 0.35);
 }
 
-.glow-indigo {
-  box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.3);
+.glow-indigo, .glow-purple {
+  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.35);
 }
 
-.glass-glow-cyan {
-  box-shadow: 0 0 30px -4px rgba(6, 182, 212, 0.35);
+.glass-glow-cyan, .glass-glow-violet {
+  box-shadow: 0 0 30px -4px rgba(192, 132, 252, 0.38);
 }
 
 .glass-glow-teal {
-  box-shadow: 0 0 30px -4px rgba(20, 184, 166, 0.35);
+  box-shadow: 0 0 30px -4px rgba(216, 180, 254, 0.35);
 }
 
 .glass-glow-gold {
@@ -147,7 +147,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #00e5c8 0%, #38bdf8 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #f5d0fe 0%, #d8b4fe 35%, #c084fc 70%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

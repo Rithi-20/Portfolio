@@ -8,13 +8,13 @@ export const CurrentFocusSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col mb-12">
-          <div className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">
+          <div className="text-xs font-mono uppercase tracking-widest text-violet-300 mb-2">
             Continuous Learning & Exploration
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
             What I'm Exploring Now
           </h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded mt-3" />
+          <div className="w-12 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
           <p className="text-sm text-slate-400 mt-3 max-w-2xl">
             Currently expanding my knowledge in advanced agent architectures, system reliability, and scalable infrastructure patterns.
           </p>
@@ -25,17 +25,17 @@ export const CurrentFocusSection: React.FC = () => {
           {CURRENT_FOCUS_TOPICS.map((topic, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-[#0c111e] hover:bg-[#11192d] border border-white/[0.06] hover:border-cyan-500/30 transition-all duration-200 flex flex-col justify-between group"
+              className="p-6 rounded-2xl bg-[#140e24] hover:bg-[#1c1333] border border-purple-500/15 hover:border-violet-400/50 transition-all duration-200 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono text-cyan-400/90 bg-cyan-950/40 border border-cyan-800/30 px-2.5 py-0.5 rounded">
+                  <span className="text-[11px] font-mono text-violet-300 bg-violet-950/60 border border-violet-800/40 px-2.5 py-0.5 rounded">
                     {topic.status}
                   </span>
-                  <Compass className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+                  <Compass className="w-4 h-4 text-slate-500 group-hover:text-violet-400 transition-colors" />
                 </div>
 
-                <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-violet-300 transition-colors mb-2">
                   {topic.title}
                 </h3>
 

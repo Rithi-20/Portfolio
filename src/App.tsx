@@ -40,7 +40,7 @@ export default function App() {
   }, [isCommandOpen, isResumeOpen]);
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#0c0816] text-purple-50 flex flex-col selection:bg-violet-500/30 selection:text-violet-200 relative overflow-x-hidden">
       {/* Ambient Cosmic Starfield Background */}
       <CosmicStarfield />
 

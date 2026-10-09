@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   category: string;
-  categoryFilter: 'All' | 'AI / ML' | 'Generative AI' | 'Agentic AI' | 'Backend';
+  categoryFilter: 'All' | 'AI / ML' | 'Generative AI' | 'Agentic AI' | 'Backend' | 'Data Analytics';
   badge?: string;
   shortProblem: string;
   solution: string;

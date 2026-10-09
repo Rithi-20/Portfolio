@@ -16,7 +16,7 @@ export const PERSONAL_INFO = {
   subheading:
     'Computer Science graduate with hands-on production experience developing AI voice agents with ElevenLabs, ML anomaly detection pipelines, LLM copilots with FastAPI & Qwen2.5, and peer-reviewed environmental AI presented at IEEE ICESCS 2025.',
   aboutBio:
-    'Recent Computer Science graduate with hands-on industry experience at Fuzionest Private Limited (transitioned from 3-month intern to full-time Junior Software Developer) and AI research presented at IEEE. I bridge the gap between machine learning models and production software—building reliable backend APIs, interactive Flutter features, voice agents, and agentic workflows.',
+    'Recent Computer Science graduate with hands-on industry experience at Fuzionest Private Limited (3 months of internship and 6 months of professional experience as Junior Software Developer) and AI research presented at IEEE. I bridge the gap between machine learning models and production software—building reliable backend APIs, interactive Flutter features, voice agents, and agentic workflows.',
   education: {
     degree: 'Bachelor of Engineering in Computer Science and Engineering',
     institution: 'Dr. N.G.P. Institute of Technology',
@@ -31,7 +31,7 @@ export const PERSONAL_INFO = {
 
 export const QUICK_STATS = [
   { value: '8.42', label: 'B.E. CSE CGPA', subtext: 'Dr. N.G.P. Institute of Technology' },
-  { value: '6 Months', label: 'Industry Dev Exp', subtext: 'Fuzionest (Intern → Full-Time)' },
+  { value: '9 Months', label: 'Industry Dev Exp', subtext: 'Fuzionest (3m Intern + 6m Pro)' },
   { value: '17+', label: 'Built Repositories', subtext: 'AI, ML, RAG, Web & Agents' },
   { value: 'IEEE', label: 'Published Research', subtext: 'Presenter at IEEE ICESCS 2025' }
 ];
@@ -98,8 +98,12 @@ export const SKILLS_DATA: SkillItem[] = [
   { name: 'Git & GitHub', usedFor: 'Version control, branch hygiene, pull requests, and open-source hosting', category: 'Developer Tools' },
   { name: 'Postman', usedFor: 'API contract verification, parameter debugging, and endpoint testing', category: 'Developer Tools' },
   { name: 'VS Code', usedFor: 'Primary IDE for full-stack and Python development workflows', category: 'Developer Tools' },
-  { name: 'Google Colab', usedFor: 'Cloud GPU acceleration for model training and interactive experiments', category: 'Developer Tools' },
-  { name: 'Power BI & Excel', usedFor: 'Interactive business intelligence reporting and tabular data insights', category: 'Data / BI' }
+  // Data Analytics & Business Intelligence
+  { name: 'Power BI', usedFor: 'Interactive executive reporting, DAX measures, KPI modeling, and operational dashboards', category: 'Data / BI' },
+  { name: 'Advanced Excel', usedFor: 'Pivot tables, dynamic slicers, financial/variance modeling, and retail analytics', category: 'Data / BI' },
+  { name: 'SQL & Relational DBs', usedFor: 'Complex multi-table joins, subqueries, window functions, and database schema design', category: 'Data / BI' },
+  { name: 'DAX Measures', usedFor: 'Calculated columns, time intelligence, and dynamic KPI variance aggregations in Power BI', category: 'Data / BI' },
+  { name: 'Data Modeling', usedFor: 'Star/snowflake schemas, dimensional relationships, and data cleaning transformations', category: 'Data / BI' }
 ];
 
 export const EXPERIENCES: Experience[] = [
@@ -107,10 +111,10 @@ export const EXPERIENCES: Experience[] = [
     id: 'fuzionest',
     role: 'Junior Software Developer',
     company: 'Fuzionest Private Limited',
-    period: 'Jan 2026 – Jun 2026',
+    period: '3m Intern + 6m Pro Exp',
     type: 'Full-Time & Internship Transition',
     location: 'Coimbatore, Tamil Nadu, India',
-    progressionNote: 'Started as a 3-month intern and promoted to a full-time Junior Software Developer role for the subsequent 3 months.',
+    progressionNote: '3 months of internship and 6 months of professional experience as a Junior Software Developer.',
     highlights: [
       'Developed and integrated backend APIs for web and mobile applications, supporting application functionality and reliable data communication.',
       'Developed mobile application features using Flutter, contributing to frontend and backend integration.',
@@ -483,20 +487,128 @@ export const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Rithi-20/ML_Algorithm'
   },
   {
-    id: 'aerohome',
-    title: 'AeroHome Smart Environment Portal',
-    category: 'IoT & Telemetry UI',
-    categoryFilter: 'Backend',
-    badge: 'IoT Portal',
+    id: 'aerohome-bi',
+    title: 'AeroHome Production Performance Dashboard',
+    category: 'Power BI & Operations Analytics',
+    categoryFilter: 'Data Analytics',
+    badge: 'Power BI Executive',
+    isFeatured: true,
+    shortProblem:
+      'Manufacturing leaders struggled to understand the operational gap between planned and actual production, unable to isolate which plants, downtime causes, or supplier delays caused shortfalls.',
+    solution:
+      'Developed an executive-level COO dashboard in Power BI leveraging custom DAX measure hierarchies, plant-level attainment tracking, downtime categorization, and supplier delivery delay diagnostics.',
+    description:
+      'An enterprise-grade Power BI dashboard built to evaluate production plan attainment across multi-site manufacturing facilities. Features root-cause downtime breakdown, supplier delivery delay correlation, defect rate metrics, and plant-by-plant operational benchmarking.',
+    techStack: ['Power BI', 'DAX', 'Data Modeling', 'KPI Dashboards', 'Manufacturing Analytics'],
+    githubUrl: 'https://github.com/Rithi-20/AeroHome',
+    architectureSteps: [
+      { label: 'Data Ingestion', detail: 'Extracts multi-plant shift logs, scheduled plans, defect tables, and supplier PO receipts' },
+      { label: 'Star Schema Modeling', detail: 'Models dimensional relationships between Plant, Product, Calendar, and Downtime Fact tables' },
+      { label: 'DAX Calculations', detail: 'Computes Plan Attainment %, Downtime Hours, Defect Rates, and MoM Variance measures' },
+      { label: 'Root Cause Analytics', detail: 'Categorizes downtime into mechanical failure, operator shortage, and supplier delay' },
+      { label: 'Interactive Executive UI', detail: 'Renders dynamic slicers, attainment gauges, and drill-through operational views' }
+    ],
+    overviewTabs: {
+      overview: 'An operational intelligence dashboard providing COO and plant managers with real-time clarity on manufacturing plan attainment, downtime bottlenecks, and supplier fulfillment.',
+      problem: 'AeroHome experienced persistent production volume deficits across multiple plants without transparent visibility into whether shortfalls were caused by machine downtime, defective batches, or supplier component shortages.',
+      approach: 'Designed a star-schema data model linking production actuals against targets. Wrote DAX measures for dynamic attainment variance, categorized downtime events, and generated interactive drill-down reports.',
+      modelsOrArchitecture: 'Power BI Desktop + DAX Measures + Star Schema Model + Executive Presentation & PPTX Overview.',
+      results: 'Enabled leadership to pinpoint exact facilities underperforming targets and isolated top downtime drivers to improve plan fulfillment.'
+    }
+  },
+  {
+    id: 'trendkart-excel',
+    title: 'TrendKart Fashion Sales Analysis Dashboard',
+    category: 'Advanced Excel & Retail Analytics',
+    categoryFilter: 'Data Analytics',
+    badge: 'Excel Analytics',
+    isFeatured: true,
+    shortProblem:
+      'TrendKart experienced a sharp 30.6% MoM revenue contraction in November 2024 (dropping from ₹15.19L in Oct to ₹10.54L), requiring root-cause sales decomposition.',
+    solution:
+      'Constructed an automated Excel sales diagnostic model utilizing dynamic pivot tables, multi-parameter slicers, category contribution matrices, and MoM transaction cohort decomposition.',
+    description:
+      'A comprehensive retail analytics dashboard in Microsoft Excel built to diagnose month-on-month sales fluctuations. Analyzes order count reduction (512 to 351 orders, 31.4% drop), category performance (Apparel, Footwear, Accessories), customer segments, and seasonal drivers.',
+    techStack: ['Advanced Excel', 'Pivot Tables', 'Dynamic Slicers', 'MoM Variance Analysis', 'Retail KPIs', 'Conditional Formatting'],
+    githubUrl: 'https://github.com/Rithi-20/Trendkart',
+    architectureSteps: [
+      { label: 'Transaction Ingestion', detail: 'Consolidates multi-channel order records, customer segments, and product catalogs' },
+      { label: 'Data Cleaning & Logic', detail: 'Applies nested formulas (INDEX-MATCH, SUMIFS, XLOOKUP) and date normalization' },
+      { label: 'Variance Decomposition', detail: 'Separates revenue impact into Transaction Volume drop (31.4%) vs Average Order Value' },
+      { label: 'Category Matrix', detail: 'Evaluates product line elasticity across Apparel, Footwear, and Accessories' },
+      { label: 'Interactive Dashboard', detail: 'Features interactive Excel slicers, dynamic KPI cards, and trend sparklines' }
+    ],
+    overviewTabs: {
+      overview: 'A commercial retail intelligence workbook diagnosing sharp MoM sales contractions and revealing category-level revenue opportunities.',
+      problem: 'After record-breaking ₹15.19L sales in October 2024, November revenue plummeted to ₹10.54L (-30.6%). Management urgently needed to isolate whether the decline stemmed from basket size erosion or buyer transaction volume.',
+      approach: 'Audited transactional log data, formulated dynamic pivot architectures, isolated volume (-31.4% orders) vs pricing factors, and mapped promotional timing.',
+      modelsOrArchitecture: 'Advanced Excel Workbook + Pivot Models + Multi-tier Slicers + Executive PowerPoint Presentation.',
+      results: 'Demonstrated that order count drop drove the contraction while AOV remained stable, pinpointing marketing re-engagement strategies.'
+    }
+  },
+  {
+    id: 'novatech-bi',
+    title: 'NovaTech Production & Plant Performance Dashboard',
+    category: 'Power BI & Industrial Intelligence',
+    categoryFilter: 'Data Analytics',
+    badge: 'Power BI Dashboard',
     isFeatured: false,
     shortProblem:
-      'Smart indoor climate devices lack unified telemetry dashboards to observe ambient air quality, temperature, and ventilation controls.',
+      'NovaTech recorded an unexpected manufacturing contraction in June 2025 compared to May 2025, needing multi-plant operational analysis.',
     solution:
-      'Engineered an intuitive telemetry dashboard interface displaying indoor climate metrics and device state toggles in a clean user interface.',
+      'Designed an operational Power BI dashboard with multi-facility volume variance, shift-level efficiency benchmarking, and product mix shift tracking.',
     description:
-      'Modern living and environmental telemetry dashboard monitoring indoor air quality parameters, device connectivity, and room automation controls.',
-    techStack: ['JavaScript', 'HTML5', 'CSS3', 'Sensor UX'],
-    githubUrl: 'https://github.com/Rithi-20/AeroHome'
+      'Operations performance dashboard diagnosing monthly production volume variance across plants and product lines. Tracks plant capacity utilization, shift output, and defect frequencies.',
+    techStack: ['Power BI', 'DAX Measures', 'Capacity Utilization', 'Production Planning', 'Operations BI'],
+    githubUrl: 'https://github.com/Rithi-20/NovaTech'
+  },
+  {
+    id: 'healthplus-sql',
+    title: 'HealthPlus Healthcare Database & Utilization Analysis',
+    category: 'SQL & Healthcare Relational Analytics',
+    categoryFilter: 'Data Analytics',
+    badge: 'SQL Analytics',
+    isFeatured: false,
+    shortProblem:
+      'HealthPlus clinics struggled with unbalanced patient consultation loads, specialty bottlenecks, and opaque billing revenue distribution.',
+    solution:
+      'Authored comprehensive relational database queries and analytical scripts analyzing patient consultation patterns, specialist capacity, clinic utilization, and billing revenue.',
+    description:
+      'Healthcare database analytics in SQL evaluating member visit demand, high-volume clinic performance, doctor specialty workload distribution, and procedure billing revenue streams.',
+    techStack: ['SQL', 'MySQL', 'Relational Database Design', 'Complex Joins', 'Window Functions', 'Healthcare Analytics'],
+    githubUrl: 'https://github.com/Rithi-20/Healthplus'
+  },
+  {
+    id: 'freshmart-excel',
+    title: 'FreshMart Sales & Profitability Analysis Dashboard',
+    category: 'Advanced Excel & Profitability Modeling',
+    categoryFilter: 'Data Analytics',
+    badge: 'Excel Modeling',
+    isFeatured: false,
+    shortProblem:
+      'FreshMart lacked consolidated transparency into product profit margins versus discount erosion across diverse sales channels and product lines.',
+    solution:
+      'Modeled an interactive Excel decision dashboard evaluating gross margins, product category profitability, channel sales velocity, and inventory turnover.',
+    description:
+      'Commercial retail profitability workbook in Excel assessing margin drivers across products, categories, sales channels, and seasonal timeframes with dynamic visual KPI trackers.',
+    techStack: ['Advanced Excel', 'Financial Modeling', 'Margin Analysis', 'Inventory Turnover', 'Pivot Dashboards'],
+    githubUrl: 'https://github.com/Rithi-20/Freshmart'
+  },
+  {
+    id: 'medicare-sql',
+    title: 'MediCare Clinical Capacity & Hospital Resource Optimization',
+    category: 'SQL & Hospital Capacity Analytics',
+    categoryFilter: 'Data Analytics',
+    badge: 'SQL Database',
+    isFeatured: false,
+    shortProblem:
+      'Hospital networks faced chronic appointment scheduling delays and suboptimal bed capacity allocation across in-demand medical specialties.',
+    solution:
+      'Designed a normalized relational database schema with complex SQL queries evaluating hospital bed occupancy, doctor specialization distribution, and appointment wait times.',
+    description:
+      'Relational hospital database and query optimization project analyzing clinical resources, doctor specialization capacity, patient appointment turnaround, and bed occupancy rates.',
+    techStack: ['SQL', 'Database Normalization', 'Stored Queries', 'Hospital Management', 'Capacity Planning'],
+    githubUrl: 'https://github.com/Rithi-20/Medicare'
   }
 ];
 
@@ -565,7 +677,7 @@ export const JOURNEY_MILESTONES = [
     id: 'milestone-3',
     title: 'Production Software Developer',
     phase: 'Industry Development',
-    description: 'Transitioned from intern to full-time developer at Fuzionest, engineering backend APIs, Flutter features, and voice agents.',
+    description: 'Completed 3 months of internship and 6 months of professional experience as a Junior Software Developer at Fuzionest, engineering backend APIs, Flutter features, and voice agents.',
     technologies: ['Backend APIs', 'Flutter', 'ElevenLabs', 'Node.js']
   }
 ];

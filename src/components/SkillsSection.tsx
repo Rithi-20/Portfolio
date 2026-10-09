@@ -34,6 +34,10 @@ export const SkillsSection: React.FC = () => {
 
   const marqueeSkills = [
     'Python',
+    'Power BI',
+    'Advanced Excel',
+    'SQL Analytics',
+    'DAX Measures',
     'RAG Architectures',
     'Machine Learning',
     'Deep Learning',
@@ -61,9 +65,9 @@ export const SkillsSection: React.FC = () => {
       prefix: 'Under AI',
       subtitle: 'LLMs, agentic systems, RAG retrieval & computer vision models',
       icon: Brain,
-      accentColor: 'text-cyan-400',
-      borderColor: 'border-cyan-500/30 hover:border-cyan-400/50',
-      badgeBg: 'bg-cyan-950/70 text-cyan-300 border-cyan-800/40',
+      accentColor: 'text-violet-400',
+      borderColor: 'border-violet-500/30 hover:border-violet-400/60',
+      badgeBg: 'bg-violet-950/70 text-violet-200 border-violet-800/40',
       skills: [
         { name: 'RAG Architectures (FAISS)', desc: 'Vector search & grounded context retrieval' },
         { name: 'Machine Learning', desc: 'Supervised/unsupervised algorithms & anomaly detection' },
@@ -79,14 +83,32 @@ export const SkillsSection: React.FC = () => {
       ]
     },
     {
+      id: 'analytics',
+      title: 'Data Analytics & Business Intelligence',
+      prefix: 'Under Data Analytics',
+      subtitle: 'Executive dashboards, DAX measures, dynamic spreadsheet models & SQL analytics',
+      icon: Boxes,
+      accentColor: 'text-violet-300',
+      borderColor: 'border-purple-500/30 hover:border-violet-400/60',
+      badgeBg: 'bg-purple-950/70 text-violet-200 border-purple-800/40',
+      skills: [
+        { name: 'Power BI', desc: 'Interactive executive reporting, DAX measures & KPI dashboards' },
+        { name: 'Advanced Excel', desc: 'Pivot tables, dynamic slicers, MoM variance models & financial formulas' },
+        { name: 'SQL & Database Analytics', desc: 'Complex multi-table joins, aggregations & query optimization' },
+        { name: 'DAX Measures', desc: 'Calculated metrics, time intelligence & dynamic variance modeling' },
+        { name: 'Data Modeling (Star Schema)', desc: 'Dimensional relationship architecture & table normalization' },
+        { name: 'Pandas & NumPy', desc: 'Exploratory data analysis, cohort breakdown & cleaning pipelines' }
+      ]
+    },
+    {
       id: 'backend',
       title: 'Backend & Systems Engineering',
       prefix: 'Under Backend',
       subtitle: 'High-speed asynchronous APIs, RESTful contracts & microservices',
       icon: Server,
-      accentColor: 'text-indigo-400',
-      borderColor: 'border-indigo-500/30 hover:border-indigo-400/50',
-      badgeBg: 'bg-indigo-950/70 text-indigo-300 border-indigo-800/40',
+      accentColor: 'text-purple-400',
+      borderColor: 'border-purple-500/30 hover:border-purple-400/60',
+      badgeBg: 'bg-purple-950/70 text-purple-200 border-purple-800/40',
       skills: [
         { name: 'FastAPI', desc: 'High-throughput async Python endpoints for ML/LLM services' },
         { name: 'Node.js & Express.js', desc: 'Event-driven server runtimes & REST routes' },
@@ -101,7 +123,7 @@ export const SkillsSection: React.FC = () => {
       subtitle: 'Core programming syntax, algorithmic problem solving & web logic',
       icon: Code2,
       accentColor: 'text-emerald-400',
-      borderColor: 'border-emerald-500/30 hover:border-emerald-400/50',
+      borderColor: 'border-emerald-500/30 hover:border-emerald-400/60',
       badgeBg: 'bg-emerald-950/70 text-emerald-300 border-emerald-800/40',
       skills: [
         { name: 'Python', desc: 'Primary language for AI, ML & backend services' },
@@ -117,7 +139,7 @@ export const SkillsSection: React.FC = () => {
       subtitle: 'Relational schemas, NoSQL document stores & high-dimensional vector search',
       icon: Database,
       accentColor: 'text-amber-400',
-      borderColor: 'border-amber-500/30 hover:border-amber-400/50',
+      borderColor: 'border-amber-500/30 hover:border-amber-400/60',
       badgeBg: 'bg-amber-950/70 text-amber-300 border-amber-800/40',
       skills: [
         { name: 'MySQL', desc: 'Relational schema modeling, queries & indexing' },
@@ -133,9 +155,9 @@ export const SkillsSection: React.FC = () => {
       prefix: 'Under Developer Tools',
       subtitle: 'Version control hygiene, automated testing & cloud environments',
       icon: Wrench,
-      accentColor: 'text-sky-400',
-      borderColor: 'border-sky-500/30 hover:border-sky-400/50',
-      badgeBg: 'bg-sky-950/70 text-sky-300 border-sky-800/40',
+      accentColor: 'text-fuchsia-400',
+      borderColor: 'border-fuchsia-500/30 hover:border-fuchsia-400/60',
+      badgeBg: 'bg-fuchsia-950/70 text-fuchsia-200 border-fuchsia-800/40',
       skills: [
         { name: 'Git & GitHub', desc: 'Version control, branching & open-source workflows' },
         { name: 'Postman', desc: 'API testing, parameter verification & mocking' },
@@ -153,25 +175,25 @@ export const SkillsSection: React.FC = () => {
       : skillDomains.filter((d) => d.id === selectedDomain);
 
   return (
-    <section id="skills" className="pt-8 pb-16 sm:pt-10 sm:pb-20 relative bg-[#080d18]/70">
+    <section id="skills" className="pt-8 pb-16 sm:pt-10 sm:pb-20 relative bg-[#0c0817]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col mb-8">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             What I Know
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded mt-3" />
+          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
         </div>
 
         {/* Infinite Tech Marquee Row */}
-        <div className="overflow-hidden py-3 mb-10 border-y border-white/[0.06] bg-black/20">
+        <div className="overflow-hidden py-3 mb-10 border-y border-purple-500/15 bg-black/30">
           <div className="animate-marquee gap-3">
             {[...marqueeSkills, ...marqueeSkills].map((tech, idx) => (
               <span
                 key={idx}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-mono font-medium whitespace-nowrap bg-white/[0.02] border border-white/[0.08] text-slate-300 hover:text-cyan-300 hover:border-cyan-500/40 hover:bg-cyan-950/40 transition-all duration-150"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-mono font-medium whitespace-nowrap bg-white/[0.02] border border-purple-500/15 text-purple-200 hover:text-violet-200 hover:border-violet-500/50 hover:bg-violet-950/40 transition-all duration-150"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
                 <span>{tech}</span>
               </span>
             ))}
@@ -185,8 +207,8 @@ export const SkillsSection: React.FC = () => {
             onClick={() => setSelectedDomain('all')}
             className={`px-3.5 py-1.5 text-xs font-mono rounded-lg whitespace-nowrap transition-all duration-150 cursor-pointer ${
               selectedDomain === 'all'
-                ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm shadow-cyan-500/20'
-                : 'text-slate-400 hover:text-white bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05]'
+                ? 'bg-violet-500/20 text-violet-200 border border-violet-500/50 shadow-sm shadow-violet-500/20'
+                : 'text-purple-300/70 hover:text-white bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10'
             }`}
           >
             All Domains
@@ -200,8 +222,8 @@ export const SkillsSection: React.FC = () => {
                 onClick={() => setSelectedDomain(domain.id)}
                 className={`px-3.5 py-1.5 text-xs font-mono rounded-lg whitespace-nowrap transition-all duration-150 cursor-pointer ${
                   isActive
-                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm shadow-cyan-500/20'
-                    : 'text-slate-400 hover:text-white bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05]'
+                    ? 'bg-violet-500/20 text-violet-200 border border-violet-500/50 shadow-sm shadow-violet-500/20'
+                    : 'text-purple-300/70 hover:text-white bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10'
                 }`}
               >
                 {domain.prefix}
@@ -219,15 +241,15 @@ export const SkillsSection: React.FC = () => {
             return (
               <div
                 key={domain.id}
-                className={`p-6 sm:p-7 rounded-2xl bg-[#0a0f1c] border ${domain.borderColor} transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/15 hover:-translate-y-1.5 hover:scale-[1.008] flex flex-col justify-between cursor-default ${
+                className={`p-6 sm:p-7 rounded-2xl bg-[#140e24] border ${domain.borderColor} transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-1.5 hover:scale-[1.008] flex flex-col justify-between cursor-default ${
                   isFullWidth ? 'lg:col-span-2' : ''
                 }`}
               >
                 <div>
                   {/* Category Header */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-white/[0.06]">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-purple-500/15">
                     <div className="flex items-center gap-3">
-                      <div className={`p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] ${domain.accentColor}`}>
+                      <div className={`p-2.5 rounded-xl bg-white/[0.03] border border-purple-500/15 ${domain.accentColor}`}>
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
@@ -239,13 +261,13 @@ export const SkillsSection: React.FC = () => {
                             {domain.title}
                           </h3>
                         </div>
-                        <p className="text-xs text-slate-400 mt-0.5">
+                        <p className="text-xs text-purple-300/70 mt-0.5">
                           {domain.subtitle}
                         </p>
                       </div>
                     </div>
 
-                    <span className="text-xs font-mono text-slate-500">
+                    <span className="text-xs font-mono text-purple-400/60">
                       {domain.skills.length} Technologies
                     </span>
                   </div>
@@ -255,16 +277,16 @@ export const SkillsSection: React.FC = () => {
                     {domain.skills.map((skill, sIdx) => (
                       <div
                         key={sIdx}
-                        className="p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.05] hover:border-cyan-400/50 hover:shadow-md hover:shadow-cyan-500/15 transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] flex flex-col justify-between group cursor-default"
+                        className="p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10 hover:border-violet-400/50 hover:shadow-md hover:shadow-violet-500/15 transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] flex flex-col justify-between group cursor-default"
                       >
                         <div className="flex items-center justify-between gap-1 mb-1">
-                          <span className="text-xs font-mono font-bold text-slate-200 group-hover:text-cyan-300 transition-colors">
+                          <span className="text-xs font-mono font-bold text-purple-100 group-hover:text-violet-200 transition-colors">
                             {skill.name}
                           </span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all" />
                         </div>
                         {skill.desc && (
-                          <p className="text-[11px] text-slate-400 leading-snug">
+                          <p className="text-[11px] text-purple-300/70 leading-snug">
                             {skill.desc}
                           </p>
                         )}

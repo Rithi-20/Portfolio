@@ -83,13 +83,13 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
       aria-labelledby="resume-title"
     >
       <div
-        className="relative w-full max-w-4xl bg-[#090d16] border border-white/10 rounded-2xl shadow-2xl overflow-hidden my-6 flex flex-col max-h-[90vh]"
+        className="relative w-full max-w-4xl bg-[#140e24] border border-purple-500/25 rounded-2xl shadow-2xl overflow-hidden my-6 flex flex-col max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Action Header */}
-        <div className="p-4 sm:px-6 bg-[#0e1424] border-b border-white/10 flex items-center justify-between gap-3">
+        <div className="p-4 sm:px-6 bg-[#18112c] border-b border-purple-500/15 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-cyan-400 font-semibold uppercase tracking-wider">
+            <span className="text-xs font-mono text-violet-300 font-semibold uppercase tracking-wider">
               Recruiter Dossier
             </span>
             <span className="text-slate-600">·</span>
@@ -104,7 +104,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
               onClick={handlePrint}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-colors cursor-pointer"
             >
-              <Printer className="w-3.5 h-3.5 text-cyan-400" />
+              <Printer className="w-3.5 h-3.5 text-violet-400" />
               <span>Print / Save PDF</span>
             </button>
 
@@ -138,15 +138,15 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
         </div>
 
         {/* Resume Content Paper */}
-        <div className="p-6 sm:p-10 overflow-y-auto space-y-8 bg-[#090d16] text-slate-200 text-xs sm:text-sm">
+        <div className="p-6 sm:p-10 overflow-y-auto space-y-8 bg-[#140e24] text-slate-200 text-xs sm:text-sm">
           {/* Resume Header */}
-          <div className="border-b border-white/10 pb-6">
+          <div className="border-b border-purple-500/20 pb-6">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div>
                 <h1 id="resume-title" className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                   {PERSONAL_INFO.name}
                 </h1>
-                <div className="text-sm font-semibold text-cyan-400 mt-1">
+                <div className="text-sm font-semibold text-violet-300 mt-1">
                   {PERSONAL_INFO.title}
                 </div>
               </div>
@@ -154,15 +154,15 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
               <div className="text-right sm:text-right space-y-1 text-xs font-mono text-slate-400">
                 <div>{PERSONAL_INFO.email}</div>
                 <div>{PERSONAL_INFO.location}</div>
-                <div className="text-cyan-400">{PERSONAL_INFO.github}</div>
-                <div className="text-sky-400">{PERSONAL_INFO.linkedin}</div>
+                <div className="text-violet-400">{PERSONAL_INFO.github}</div>
+                <div className="text-purple-300">{PERSONAL_INFO.linkedin}</div>
               </div>
             </div>
           </div>
 
           {/* Professional Summary */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-2">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-violet-300 font-bold mb-2">
               Professional Summary
             </h2>
             <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">
@@ -172,7 +172,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
 
           {/* Education */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-violet-300 font-bold mb-3">
               Education
             </h2>
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -184,7 +184,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
                   {PERSONAL_INFO.education.institution}, {PERSONAL_INFO.education.location}
                 </div>
               </div>
-              <div className="font-mono text-cyan-400 font-semibold text-xs sm:text-sm">
+              <div className="font-mono text-violet-300 font-semibold text-xs sm:text-sm">
                 CGPA: {PERSONAL_INFO.education.cgpa}
               </div>
             </div>
@@ -192,7 +192,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
 
           {/* Experience */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-violet-300 font-bold mb-3">
               Professional Experience & Internships
             </h2>
             <div className="space-y-4">
@@ -203,11 +203,11 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
                       <span className="font-bold text-white text-sm">{exp.role}</span>
                       <span className="text-slate-400"> — {exp.company}</span>
                     </div>
-                    <span className="text-xs font-mono text-cyan-400">{exp.period}</span>
+                    <span className="text-xs font-mono text-violet-300">{exp.period}</span>
                   </div>
 
                   {exp.progressionNote && (
-                    <div className="text-xs text-cyan-200/90 font-mono mb-2 bg-cyan-950/30 px-2 py-1 rounded">
+                    <div className="text-xs text-violet-200/90 font-mono mb-2 bg-violet-950/40 border border-violet-800/40 px-2 py-1 rounded">
                       Progression: {exp.progressionNote}
                     </div>
                   )}
@@ -224,7 +224,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
 
           {/* Projects */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-violet-300 font-bold mb-3">
               Key Engineering Projects
             </h2>
             <div className="space-y-3">
@@ -232,7 +232,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
                 <div key={proj.id} className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
                     <span className="font-bold text-white text-sm">{proj.title}</span>
-                    <span className="text-xs font-mono text-cyan-400">{proj.category}</span>
+                    <span className="text-xs font-mono text-violet-300">{proj.category}</span>
                   </div>
                   <p className="text-xs text-slate-300 mb-2 leading-relaxed">
                     {proj.description}
@@ -248,7 +248,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
 
           {/* Publications */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-violet-300 font-bold mb-3">
               Publications
             </h2>
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex flex-wrap items-center justify-between gap-3">
@@ -256,7 +256,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
                 <div className="font-bold text-white text-sm">
                   GreenMark: A Reward-Based Urban Greening System with Plant Monitoring and Carbon Credit Certification
                 </div>
-                <div className="text-xs font-mono text-cyan-400 mt-1">
+                <div className="text-xs font-mono text-violet-300 mt-1">
                   IEEE ICESCS 2025 · Hindusthan Institute of Technology, Coimbatore
                 </div>
               </div>
@@ -264,7 +264,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
                 href="https://ieeexplore.ieee.org/document/11212334"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold text-blue-300 hover:text-white bg-blue-950/60 hover:bg-blue-900 border border-blue-500/40 transition-colors shrink-0"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold text-violet-200 hover:text-white bg-violet-950/60 hover:bg-violet-900 border border-violet-500/40 transition-colors shrink-0"
               >
                 <span>IEEE Xplore</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -274,7 +274,7 @@ ${CERTIFICATIONS.map(c => `- ${c.title} (${c.organization}, ${c.year})`).join('\
 
           {/* Certifications */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">
+            <h2 className="text-xs font-mono uppercase tracking-widest text-violet-300 font-bold mb-3">
               Certifications & Training
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">

@@ -33,7 +33,7 @@ export const CosmicStarfield: React.FC = () => {
       color: string;
     }> = [];
 
-    const colors = ['#06b6d4', '#38bdf8', '#818cf8', '#10b981', '#ffffff'];
+    const colors = ['#c084fc', '#d8b4fe', '#a855f7', '#e879f9', '#ffffff'];
 
     for (let i = 0; i < starCount; i++) {
       stars.push({
@@ -95,8 +95,8 @@ export const CosmicStarfield: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(star.x, star.y);
             ctx.lineTo(other.x, other.y);
-            ctx.strokeStyle = '#06b6d4';
-            ctx.globalAlpha = (1 - distBetween / 110) * 0.15;
+            ctx.strokeStyle = '#c084fc';
+            ctx.globalAlpha = (1 - distBetween / 110) * 0.18;
             ctx.stroke();
           }
         }

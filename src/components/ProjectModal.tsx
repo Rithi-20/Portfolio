@@ -35,20 +35,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       aria-labelledby="modal-title"
     >
       <div
-        className="relative w-full max-w-4xl bg-[#0b101c] border border-white/10 rounded-2xl shadow-2xl overflow-hidden my-8"
+        className="relative w-full max-w-4xl bg-[#140e24] border border-purple-500/25 rounded-2xl shadow-2xl overflow-hidden my-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
-        <div className="p-6 border-b border-white/[0.08] flex items-start justify-between gap-4 bg-[#0e1424]">
+        <div className="p-6 border-b border-purple-500/15 flex items-start justify-between gap-4 bg-[#18112c]">
           <div>
             <div className="flex items-center gap-2 mb-1.5">
-              <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider">
+              <span className="text-xs font-mono text-violet-300 uppercase tracking-wider">
                 {project.category}
               </span>
               {project.conference && (
                 <>
                   <span className="text-slate-600">·</span>
-                  <span className="text-xs font-mono text-indigo-300">
+                  <span className="text-xs font-mono text-purple-300">
                     {project.conference}
                   </span>
                 </>
@@ -71,13 +71,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Modal Navigation Tabs */}
         {project.overviewTabs && (
-          <div className="flex items-center gap-1 p-2 bg-[#090d16] border-b border-white/[0.06] overflow-x-auto scrollbar-none text-xs">
+          <div className="flex items-center gap-1 p-2 bg-[#0e091b] border-b border-purple-500/15 overflow-x-auto scrollbar-none text-xs">
             <button
               type="button"
               onClick={() => setActiveTab('overview')}
               className={`px-3 py-1.5 rounded-md font-medium transition-colors cursor-pointer ${
                 activeTab === 'overview'
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  ? 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -88,7 +88,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               onClick={() => setActiveTab('problem')}
               className={`px-3 py-1.5 rounded-md font-medium transition-colors cursor-pointer ${
                 activeTab === 'problem'
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  ? 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -99,7 +99,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               onClick={() => setActiveTab('approach')}
               className={`px-3 py-1.5 rounded-md font-medium transition-colors cursor-pointer ${
                 activeTab === 'approach'
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  ? 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -110,7 +110,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               onClick={() => setActiveTab('models')}
               className={`px-3 py-1.5 rounded-md font-medium transition-colors cursor-pointer ${
                 activeTab === 'models'
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  ? 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -121,7 +121,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               onClick={() => setActiveTab('results')}
               className={`px-3 py-1.5 rounded-md font-medium transition-colors cursor-pointer ${
                 activeTab === 'results'
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  ? 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -132,7 +132,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               onClick={() => setActiveTab('tech')}
               className={`px-3 py-1.5 rounded-md font-medium transition-colors cursor-pointer ${
                 activeTab === 'tech'
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  ? 'bg-violet-500/20 text-violet-200 border border-violet-500/40'
                   : 'text-slate-400 hover:text-white'
               }`}
             >
@@ -193,7 +193,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     {project.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="text-xs font-mono px-3 py-1 rounded bg-[#11192e] text-cyan-300 border border-cyan-800/30"
+                        className="text-xs font-mono px-3 py-1 rounded bg-[#20143a] text-violet-300 border border-purple-500/30"
                       >
                         {tech}
                       </span>
@@ -208,16 +208,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {project.architectureSteps && (
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Layers className="w-4 h-4 text-cyan-400" />
+                <Layers className="w-4 h-4 text-violet-400" />
                 <h4 className="text-sm font-semibold text-white">System Architecture & Pipeline Flow</h4>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
                 {project.architectureSteps.map((step, sIdx) => (
                   <div
                     key={sIdx}
-                    className="p-3 rounded-lg bg-[#0e1424] border border-white/[0.06] flex items-start gap-3"
+                    className="p-3 rounded-lg bg-[#18112c] border border-purple-500/15 flex items-start gap-3"
                   >
-                    <span className="w-5 h-5 rounded-full bg-cyan-950 border border-cyan-500/40 text-cyan-400 font-mono text-[11px] flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-5 h-5 rounded-full bg-violet-950 border border-violet-500/40 text-violet-300 font-mono text-[11px] flex items-center justify-center shrink-0 mt-0.5">
                       {sIdx + 1}
                     </span>
                     <div>
@@ -252,7 +252,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         </div>
 
         {/* Footer Bar */}
-        <div className="p-4 sm:p-5 border-t border-white/[0.08] bg-[#090d16] flex items-center justify-between gap-4">
+        <div className="p-4 sm:p-5 border-t border-purple-500/15 bg-[#0e091b] flex items-center justify-between gap-4">
           <div className="text-xs font-mono text-slate-500">
             Source repository on GitHub
           </div>
@@ -263,7 +263,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 href={project.paperUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors shadow-sm shadow-blue-500/20"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 hover:from-violet-500 hover:to-purple-500 transition-colors shadow-sm shadow-purple-500/20"
               >
                 <BookOpen className="w-4 h-4" />
                 <span>IEEE Paper</span>
@@ -284,7 +284,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium text-white bg-slate-800 hover:bg-slate-700 border border-white/10 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium text-white bg-[#1c1333] hover:bg-[#251a44] border border-purple-500/30 transition-colors"
             >
               <Github className="w-4 h-4" />
               <span>View Repository</span>

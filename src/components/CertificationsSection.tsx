@@ -8,15 +8,15 @@ export const CertificationsSection: React.FC = () => {
       case 'ethical-hacking':
         return <ShieldCheck className="w-5 h-5 text-emerald-400" />;
       case 'cloud-computing':
-        return <Cloud className="w-5 h-5 text-sky-400" />;
+        return <Cloud className="w-5 h-5 text-violet-400" />;
       case 'blockchain':
-        return <Blocks className="w-5 h-5 text-indigo-400" />;
+        return <Blocks className="w-5 h-5 text-purple-400" />;
       case 'salesforce':
-        return <Award className="w-5 h-5 text-blue-400" />;
+        return <Award className="w-5 h-5 text-fuchsia-400" />;
       case 'novitech-masterclass':
-        return <Sparkles className="w-5 h-5 text-cyan-400" />;
+        return <Sparkles className="w-5 h-5 text-violet-300" />;
       default:
-        return <Award className="w-5 h-5 text-cyan-400" />;
+        return <Award className="w-5 h-5 text-violet-400" />;
     }
   };
 
@@ -28,7 +28,7 @@ export const CertificationsSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             What I Achieved
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded mt-3" />
+          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
         </div>
 
         {/* Certifications Grid */}
@@ -36,19 +36,19 @@ export const CertificationsSection: React.FC = () => {
           {CERTIFICATIONS.map((cert) => (
             <div
               key={cert.id}
-              className="p-6 rounded-2xl bg-[#0c111e] hover:bg-[#11192b] border border-white/[0.06] hover:border-cyan-400/60 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] flex flex-col justify-between group cursor-default"
+              className="p-6 rounded-2xl bg-[#140e24] hover:bg-[#1c1333] border border-purple-500/15 hover:border-violet-400/60 shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] flex flex-col justify-between group cursor-default"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                     {getBadgeIcon(cert.id)}
                   </div>
-                  <span className="text-xs font-mono text-cyan-400 bg-cyan-950/40 border border-cyan-800/40 px-2.5 py-0.5 rounded">
+                  <span className="text-xs font-mono text-violet-300 bg-violet-950/50 border border-violet-800/50 px-2.5 py-0.5 rounded">
                     {cert.credentialBadge}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors mb-1.5">
+                <h3 className="text-base font-bold text-white group-hover:text-violet-300 transition-colors mb-1.5">
                   {cert.title}
                 </h3>
 

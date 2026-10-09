@@ -30,7 +30,7 @@ export const HeroVisual: React.FC = () => {
     // 1. Inner glowing icosahedron core
     const innerGeom = new THREE.IcosahedronGeometry(4.2, 1);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0x06b6d4,
+      color: 0xc084fc,
       wireframe: true,
       transparent: true,
       opacity: 0.45
@@ -41,7 +41,7 @@ export const HeroVisual: React.FC = () => {
     // 2. Outer dodecahedron cage
     const outerGeom = new THREE.DodecahedronGeometry(6.2, 0);
     const outerMat = new THREE.MeshBasicMaterial({
-      color: 0x6366f1,
+      color: 0xa855f7,
       wireframe: true,
       transparent: true,
       opacity: 0.25
@@ -52,7 +52,7 @@ export const HeroVisual: React.FC = () => {
     // 3. Central glowing point
     const coreSphereGeom = new THREE.SphereGeometry(1.6, 16, 16);
     const coreSphereMat = new THREE.MeshBasicMaterial({
-      color: 0x38bdf8,
+      color: 0xd8b4fe,
       transparent: true,
       opacity: 0.6
     });
@@ -64,9 +64,9 @@ export const HeroVisual: React.FC = () => {
     const particlePositions = new Float32Array(particleCount * 3);
     const particleColors = new Float32Array(particleCount * 3);
 
-    const color1 = new THREE.Color(0x06b6d4); // Cyan
-    const color2 = new THREE.Color(0x818cf8); // Indigo
-    const color3 = new THREE.Color(0x10b981); // Emerald
+    const color1 = new THREE.Color(0xc084fc); // Light Violet
+    const color2 = new THREE.Color(0xa855f7); // Purple
+    const color3 = new THREE.Color(0xe879f9); // Fuchsia
 
     for (let i = 0; i < particleCount; i++) {
       const radius = 6.5 + Math.random() * 5.5;
@@ -198,11 +198,11 @@ export const HeroVisual: React.FC = () => {
   return (
     <div className="relative w-full aspect-square max-w-[480px] mx-auto flex items-center justify-center">
       {/* Glow aura backdrop */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/15 via-indigo-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-violet-500/20 via-purple-500/15 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       {/* Cybernetic outer rings */}
-      <div className="absolute inset-4 rounded-full border border-cyan-500/10 pointer-events-none animate-pulse" />
-      <div className="absolute inset-12 rounded-full border border-indigo-500/15 pointer-events-none" />
+      <div className="absolute inset-4 rounded-full border border-violet-500/15 pointer-events-none animate-pulse" />
+      <div className="absolute inset-12 rounded-full border border-purple-500/20 pointer-events-none" />
 
       {/* Three.js Canvas Container */}
       <div
@@ -217,12 +217,12 @@ export const HeroVisual: React.FC = () => {
           key={idx}
           onMouseEnter={() => setActiveTag(badge.label)}
           onMouseLeave={() => setActiveTag(null)}
-          className={`absolute ${badge.pos} z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d1424]/85 backdrop-blur-md border border-cyan-500/30 text-xs font-mono shadow-lg transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:bg-[#111c34] hover:shadow-cyan-500/20 cursor-default animate-float-3d`}
+          className={`absolute ${badge.pos} z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#140e24]/90 backdrop-blur-md border border-purple-500/30 text-xs font-mono shadow-lg transition-all duration-300 hover:scale-105 hover:border-violet-400 hover:bg-[#1c1333] hover:shadow-violet-500/20 cursor-default animate-float-3d`}
           style={{ animationDelay: `${idx * 0.8}s` }}
         >
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+          <span className="w-2 h-2 rounded-full bg-violet-400 animate-ping" />
           <span className="text-white font-medium">{badge.label}</span>
-          <span className="text-[10px] text-cyan-400 bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-800/40">
+          <span className="text-[10px] text-violet-300 bg-violet-950/60 px-1.5 py-0.5 rounded border border-violet-800/40">
             {badge.category}
           </span>
         </div>
@@ -230,7 +230,7 @@ export const HeroVisual: React.FC = () => {
 
       {/* Interactive Hint Indicator */}
       <div className="absolute bottom-1 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-black/60 backdrop-blur border border-white/10 text-[11px] font-mono text-slate-400 flex items-center gap-1.5 pointer-events-none">
-        <Sparkles className="w-3 h-3 text-cyan-400" />
+        <Sparkles className="w-3 h-3 text-violet-400" />
         <span>Interactive 3D WebGL Core</span>
       </div>
     </div>

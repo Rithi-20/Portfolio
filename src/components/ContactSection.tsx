@@ -43,16 +43,16 @@ export const ContactSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             How to Reach Me
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded mt-3" />
+          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Direct channels and Fast actions */}
           <div className="lg:col-span-5 space-y-4">
             {/* Email Action Card */}
-            <div className="p-6 rounded-2xl bg-[#0c111e] border border-cyan-500/30 hover:border-cyan-400/60 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] cursor-default">
+            <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] cursor-default">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+                <span className="text-xs font-mono text-violet-300 uppercase tracking-wider font-semibold">
                   Primary Email
                 </span>
                 <span className="text-xs font-mono text-emerald-400 flex items-center gap-1">
@@ -69,16 +69,16 @@ export const ContactSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleCopyEmail}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold text-slate-900 bg-cyan-400 hover:bg-cyan-300 transition-all cursor-pointer shadow-sm shadow-cyan-500/20"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold text-slate-950 bg-gradient-to-r from-violet-300 to-purple-300 hover:from-violet-200 hover:to-purple-200 transition-all cursor-pointer shadow-sm shadow-violet-500/20"
                 >
                   {copied ? (
                     <>
-                      <Check className="w-4 h-4 text-slate-900" />
+                      <Check className="w-4 h-4 text-slate-950" />
                       <span>Email Copied!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-slate-900" />
+                      <Copy className="w-4 h-4 text-slate-950" />
                       <span>Copy Email</span>
                     </>
                   )}
@@ -95,7 +95,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Social channels card */}
-            <div className="p-6 rounded-2xl bg-[#0c111e] border border-white/[0.06] hover:border-cyan-400/50 shadow-lg hover:shadow-xl hover:shadow-cyan-500/15 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] space-y-3 cursor-default">
+            <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/15 hover:border-violet-400/50 shadow-lg hover:shadow-xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] space-y-3 cursor-default">
               <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
                 Professional Networks
               </div>
@@ -107,8 +107,8 @@ export const ContactSection: React.FC = () => {
                 className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <Linkedin className="w-4 h-4 text-sky-400" />
-                  <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                  <Linkedin className="w-4 h-4 text-violet-400" />
+                  <span className="text-sm font-semibold text-white group-hover:text-violet-300 transition-colors">
                     LinkedIn Profile
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export const ContactSection: React.FC = () => {
               >
                 <div className="flex items-center gap-3">
                   <Github className="w-4 h-4 text-slate-200" />
-                  <span className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                  <span className="text-sm font-semibold text-white group-hover:text-violet-300 transition-colors">
                     GitHub Profile
                   </span>
                 </div>
@@ -131,16 +131,16 @@ export const ContactSection: React.FC = () => {
               </a>
 
               <div className="flex items-center gap-2 p-3 text-xs font-mono text-slate-400">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+                <MapPin className="w-4 h-4 text-violet-400" />
                 <span>{PERSONAL_INFO.location}</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Direct Contact Form */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#0c111e] border border-white/[0.08] hover:border-cyan-500/40 shadow-2xl hover:shadow-cyan-500/15 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.005]">
+          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/20 hover:border-violet-400/50 shadow-2xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.005]">
             <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
+              <div className="flex items-center gap-2 text-xs font-mono text-violet-300 uppercase tracking-wider font-semibold">
                 <MessageSquare className="w-4 h-4" />
                 <span>Send a Direct Message</span>
               </div>
@@ -159,7 +159,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Smith"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#080d17] border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#080d17] border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                   />
                 </div>
               </div>
@@ -190,7 +190,7 @@ export const ContactSection: React.FC = () => {
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder="Enter any subject..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#080d17] border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                 />
               </div>
 
@@ -205,14 +205,14 @@ export const ContactSection: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Share details about the role, project requirements, or opportunity..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#080d17] border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all resize-none"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-sm font-semibold text-slate-900 bg-cyan-400 hover:bg-cyan-300 transition-all cursor-pointer shadow-lg shadow-cyan-500/20"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-sm font-bold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:from-violet-200 hover:to-purple-200 transition-all cursor-pointer shadow-lg shadow-violet-500/25"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Message via Email</span>

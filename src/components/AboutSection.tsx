@@ -27,24 +27,24 @@ export const AboutSection: React.FC = () => {
       label: 'Location',
       value: 'Coimbatore, Tamil Nadu, India',
       subtext: 'Open to Relocation & Remote Roles',
-      color: 'text-cyan-400',
-      bgGlow: 'border-cyan-500/20 hover:border-cyan-500/40 bg-white/[0.02]'
+      color: 'text-violet-400',
+      bgGlow: 'border-purple-500/20 hover:border-violet-500/50 bg-[#140e24]/70'
     },
     {
       icon: Languages,
       label: 'Languages',
       value: 'Tamil (Native) · English (Professional)',
       subtext: 'Fluent Technical & Team Communication',
-      color: 'text-indigo-400',
-      bgGlow: 'border-indigo-500/20 hover:border-indigo-500/40 bg-white/[0.02]'
+      color: 'text-purple-300',
+      bgGlow: 'border-purple-500/20 hover:border-purple-500/50 bg-[#140e24]/70'
     },
     {
       icon: Mail,
       label: 'Email Address',
       value: PERSONAL_INFO.email,
       subtext: copiedEmail ? 'Copied to clipboard!' : 'Click to copy email address',
-      color: 'text-sky-400',
-      bgGlow: 'border-sky-500/20 hover:border-sky-500/40 bg-white/[0.02]',
+      color: 'text-violet-300',
+      bgGlow: 'border-purple-500/20 hover:border-violet-500/50 bg-[#140e24]/70',
       onClick: handleCopyEmail,
       isInteractive: true
     },
@@ -54,77 +54,77 @@ export const AboutSection: React.FC = () => {
       value: 'Available to Work',
       subtext: 'Full-time Roles, AI Systems & Projects',
       color: 'text-emerald-400',
-      bgGlow: 'border-emerald-500/30 bg-emerald-950/10',
+      bgGlow: 'border-emerald-500/30 bg-emerald-950/20',
       isLive: true
     }
   ];
 
   return (
-    <section id="about" className="pt-16 pb-8 sm:pt-20 sm:pb-10 relative bg-[#060911]/80">
+    <section id="about" className="pt-16 pb-8 sm:pt-20 sm:pb-10 relative bg-[#0d0917]/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="flex flex-col mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             Who I Am
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded mt-3" />
+          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
         </div>
 
         {/* Top Split: Professional Summary on the Left & Quick Info Stack on the Right (Fahad & Nikhil Rajput Style) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left: Rich Personal Narrative Card (7 cols) */}
-          <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-[#090e1a] border border-cyan-500/25 hover:border-cyan-400/60 shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] relative overflow-hidden flex flex-col justify-between group cursor-default">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] relative overflow-hidden flex flex-col justify-between group cursor-default">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/[0.06]">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-sm">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-purple-500/15">
+                <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-violet-300 shadow-sm">
                   <User className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold font-mono text-cyan-300 tracking-wider uppercase">
+                  <h3 className="text-base font-bold font-mono text-violet-300 tracking-wider uppercase">
                     Engineering Ethos & Summary
                   </h3>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-purple-300/70">
                     Junior Software Developer @ Fuzionest · B.E. CSE Graduate
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-4 text-purple-100/90 text-sm sm:text-base leading-relaxed">
                 <p>
-                  I build <span className="text-white font-semibold">production-grade AI systems and scalable backend software</span>—not just theoretical experiments in notebooks. I graduated with a <span className="text-cyan-300 font-semibold">Bachelor of Engineering in Computer Science</span> from <span className="text-white font-medium">Dr. N.G.P. Institute of Technology</span> (CGPA: <span className="text-cyan-400 font-mono font-bold">8.42 / 10</span>).
+                  I build <span className="text-white font-semibold">production-grade AI systems and scalable backend software</span>—not just theoretical experiments in notebooks. I graduated with a <span className="text-violet-300 font-semibold">Bachelor of Engineering in Computer Science</span> from <span className="text-white font-medium">Dr. N.G.P. Institute of Technology</span> (CGPA: <span className="text-violet-400 font-mono font-bold">8.42 / 10</span>).
                 </p>
                 <p>
-                  At <span className="text-white font-semibold">Fuzionest Private Limited</span>, I transitioned from an intern to a full-time Junior Software Developer, developing robust backend APIs, mobile application features in <span className="text-cyan-300 font-medium">Flutter</span>, autonomous voice agents with <span className="text-sky-300 font-medium">ElevenLabs</span>, and task automation bots via Telegram.
+                  At <span className="text-white font-semibold">Fuzionest Private Limited</span>, I completed 3 months of internship and 6 months of professional experience as a Junior Software Developer, developing robust backend APIs, mobile application features in <span className="text-violet-300 font-medium">Flutter</span>, autonomous voice agents with <span className="text-purple-300 font-medium">ElevenLabs</span>, and task automation bots via Telegram.
                 </p>
                 <p>
-                  My technical focus lies at the intersection of <span className="text-emerald-400 font-medium">Applied Machine Learning</span>, <span className="text-cyan-300 font-medium">RAG Pipelines with FAISS</span>, and <span className="text-indigo-400 font-medium">Autonomous Multi-Agent Copilots</span>. I am also the co-author and presenter of the <span className="text-white font-semibold">GreenMark</span> environmental AI project presented at the <span className="text-emerald-400 font-semibold">IEEE ICESCS 2025</span> conference.
+                  My technical focus lies at the intersection of <span className="text-emerald-400 font-medium">Applied Machine Learning</span>, <span className="text-violet-300 font-medium">RAG Pipelines with FAISS</span>, and <span className="text-purple-300 font-medium">Autonomous Multi-Agent Copilots</span>. I am also the co-author and presenter of the <span className="text-white font-semibold">GreenMark</span> environmental AI project presented at the <span className="text-emerald-400 font-semibold">IEEE ICESCS 2025</span> conference.
                 </p>
-                <p className="text-slate-400 text-xs sm:text-sm">
+                <p className="text-purple-300/70 text-xs sm:text-sm">
                   I care deeply about clean system architecture, deterministic tool execution, and shipping high-impact software that solves real-world challenges.
                 </p>
               </div>
             </div>
 
             {/* Social & Contact Buttons inside Summary Card */}
-            <div className="pt-5 mt-5 border-t border-white/[0.06] flex items-center gap-3">
+            <div className="pt-5 mt-5 border-t border-purple-500/15 flex items-center gap-3">
               <a
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-cyan-500/40 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono text-purple-200 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-purple-500/20 hover:border-violet-400/50 transition-colors"
               >
-                <Github className="w-3.5 h-3.5 text-cyan-400" />
+                <Github className="w-3.5 h-3.5 text-violet-400" />
                 <span>GitHub Profile</span>
               </a>
               <a
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-sky-500/40 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono text-purple-200 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-purple-500/20 hover:border-violet-400/50 transition-colors"
               >
-                <Linkedin className="w-3.5 h-3.5 text-sky-400" />
+                <Linkedin className="w-3.5 h-3.5 text-violet-400" />
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -138,10 +138,10 @@ export const AboutSection: React.FC = () => {
                 <div
                   key={idx}
                   onClick={detail.onClick}
-                  className={`p-5 rounded-2xl border transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-2 hover:scale-[1.02] flex-1 flex flex-col justify-center ${detail.bgGlow} ${
+                  className={`p-5 rounded-2xl border transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-violet-500/20 hover:-translate-y-2 hover:scale-[1.02] flex-1 flex flex-col justify-center ${detail.bgGlow} ${
                     detail.isInteractive
-                      ? 'cursor-pointer hover:border-cyan-400/60'
-                      : 'hover:border-cyan-400/50 cursor-default'
+                      ? 'cursor-pointer hover:border-violet-400/60'
+                      : 'hover:border-violet-400/50 cursor-default'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">

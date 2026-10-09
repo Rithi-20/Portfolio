@@ -51,14 +51,14 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
       id: 'home',
       name: 'Go to Home',
       category: 'Navigation',
-      icon: <Home className="w-4 h-4 text-cyan-400" />,
+      icon: <Home className="w-4 h-4 text-violet-400" />,
       action: () => scrollTo('home')
     },
     {
       id: 'about',
       name: 'Go to About',
       category: 'Navigation',
-      icon: <Home className="w-4 h-4 text-cyan-400" />,
+      icon: <Home className="w-4 h-4 text-violet-400" />,
       action: () => scrollTo('about')
     },
     {
@@ -72,28 +72,28 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
       id: 'projects',
       name: 'Go to Projects',
       category: 'Navigation',
-      icon: <FolderGit2 className="w-4 h-4 text-cyan-400" />,
+      icon: <FolderGit2 className="w-4 h-4 text-violet-400" />,
       action: () => scrollTo('projects')
     },
     {
       id: 'skills',
       name: 'Go to Skills',
       category: 'Navigation',
-      icon: <Wrench className="w-4 h-4 text-cyan-400" />,
+      icon: <Wrench className="w-4 h-4 text-violet-400" />,
       action: () => scrollTo('skills')
     },
     {
       id: 'experience',
       name: 'Go to Experience',
       category: 'Navigation',
-      icon: <Briefcase className="w-4 h-4 text-cyan-400" />,
+      icon: <Briefcase className="w-4 h-4 text-violet-400" />,
       action: () => scrollTo('experience')
     },
     {
       id: 'contact',
       name: 'Contact Me',
       category: 'Navigation',
-      icon: <Mail className="w-4 h-4 text-cyan-400" />,
+      icon: <Mail className="w-4 h-4 text-violet-400" />,
       action: () => scrollTo('contact')
     },
     {
@@ -110,7 +110,7 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
       id: 'resume',
       name: 'Download / View Resume',
       category: 'Action',
-      icon: <FileText className="w-4 h-4 text-sky-400" />,
+      icon: <FileText className="w-4 h-4 text-violet-300" />,
       action: () => {
         onClose();
         onOpenResume();
@@ -120,7 +120,7 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
       id: 'copy-email',
       name: copied ? 'Email Copied!' : 'Copy Email Address',
       category: 'Action',
-      icon: copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-cyan-400" />,
+      icon: copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-violet-400" />,
       action: handleCopyEmail
     }
   ];
@@ -138,11 +138,11 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
       aria-modal="true"
     >
       <div
-        className="relative w-full max-w-lg bg-[#0e1424] border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-lg bg-[#140e24] border border-purple-500/25 rounded-2xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search input header */}
-        <div className="p-3.5 border-b border-white/10 flex items-center gap-3">
+        <div className="p-3.5 border-b border-purple-500/15 flex items-center gap-3">
           <Search className="w-4 h-4 text-slate-400" />
           <input
             type="text"
@@ -183,14 +183,14 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
                   <span className="text-[10px] font-mono text-slate-500 uppercase">
                     {cmd.category}
                   </span>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-cyan-400 transition-colors" />
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-violet-300 transition-colors" />
                 </div>
               </button>
             ))
           )}
         </div>
 
-        <div className="p-2.5 border-t border-white/[0.06] bg-[#090d16] flex items-center justify-between text-[11px] font-mono text-slate-500">
+        <div className="p-2.5 border-t border-purple-500/15 bg-[#0e091b] flex items-center justify-between text-[11px] font-mono text-slate-500">
           <span>Navigation Quick Menu</span>
           <span>Press ESC to exit</span>
         </div>
