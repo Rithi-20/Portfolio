@@ -154,7 +154,7 @@ export const ProjectsSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div data-aos="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               What I Built
@@ -192,7 +192,7 @@ export const ProjectsSection: React.FC = () => {
         </div>
 
         {/* Filter and Search Controls Bar */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-10 pb-4 border-b border-purple-500/15">
+        <div data-aos="fade-up" data-aos-delay="100" className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-10 pb-4 border-b border-purple-500/15">
           {/* Category Pills */}
           <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
             {filterOptions.map((filter) => {

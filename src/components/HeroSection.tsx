@@ -70,12 +70,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 flex flex-col items-center text-center">
         {/* Prominent Name Header */}
-        <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight text-white leading-[1.05] uppercase mb-3">
+        <h1
+          data-aos="fade-down"
+          data-aos-duration="800"
+          className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight text-white leading-[1.05] uppercase mb-3"
+        >
           RITHIHA <span className="gradient-text">U</span>
         </h1>
 
         {/* Animated Typing Role Terminal */}
-        <div className="h-10 sm:h-12 flex items-center justify-center mb-6 font-mono text-base sm:text-xl text-purple-100">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="h-10 sm:h-12 flex items-center justify-center mb-6 font-mono text-base sm:text-xl text-purple-100"
+        >
           <span className="text-violet-400 font-bold mr-2.5">$</span>
           <span className="text-purple-100 font-semibold transition-all duration-300">
             {titles[typedIndex]}
@@ -84,7 +92,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         </div>
 
         {/* Professional 3-Line Summary of What I Will Do */}
-        <div className="text-sm sm:text-base md:text-lg text-purple-200/90 mb-8 leading-relaxed max-w-3xl mx-auto space-y-1 font-normal">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="150"
+          className="text-sm sm:text-base md:text-lg text-purple-200/90 mb-8 leading-relaxed max-w-3xl mx-auto space-y-1 font-normal"
+        >
           <p className="text-purple-100 font-medium">
             Building production-grade AI systems, multi-agent workflows, and scalable backend architectures.
           </p>
@@ -97,10 +109,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         </div>
 
         {/* Quick Stats Ribbon - Perfectly aligned & spacious with no cutoffs */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8 w-full max-w-4xl p-4 sm:p-5 rounded-2xl bg-[#140e24]/70 border border-purple-500/15 backdrop-blur-md shadow-2xl">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8 w-full max-w-4xl p-4 sm:p-5 rounded-2xl bg-[#140e24]/70 border border-purple-500/15 backdrop-blur-md shadow-2xl"
+        >
           {heroStats.map((stat, idx) => (
             <div
               key={idx}
+              data-aos="zoom-in"
+              data-aos-delay={`${200 + idx * 75}`}
               className="p-3.5 sm:p-4 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10 hover:border-violet-400/50 hover:shadow-xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] text-center flex flex-col justify-center cursor-default group"
             >
               <div className="text-2xl sm:text-3xl font-extrabold font-mono gradient-text">
@@ -117,7 +135,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         </div>
 
         {/* Primary Action Buttons - Centered */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8"
+        >
           <button
             type="button"
             onClick={() => scrollTo('projects')}
@@ -148,7 +170,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         </div>
 
         {/* Social Footprint Bar - Centered on Single Line */}
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-2.5 sm:gap-4 md:gap-5 pt-4 border-t border-purple-500/15 text-xs font-mono text-purple-300/70 w-full max-w-4xl whitespace-nowrap">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="350"
+          className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-2.5 sm:gap-4 md:gap-5 pt-4 border-t border-purple-500/15 text-xs font-mono text-purple-300/70 w-full max-w-4xl whitespace-nowrap"
+        >
           <div className="flex items-center gap-1.5 text-violet-400 shrink-0">
             <MapPin className="w-3.5 h-3.5" />
             <span>{PERSONAL_INFO.location}</span>

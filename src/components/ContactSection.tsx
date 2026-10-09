@@ -94,7 +94,7 @@ SENDER VERIFICATION:
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col mb-10">
+        <div data-aos="fade-up" className="flex flex-col mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             How to Reach Me
           </h2>
@@ -103,7 +103,7 @@ SENDER VERIFICATION:
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Direct channels and Fast actions */}
-          <div className="lg:col-span-5 space-y-4">
+          <div data-aos="fade-right" className="lg:col-span-5 space-y-4">
             {/* Email Action Card */}
             <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] cursor-default">
               <div className="flex items-center justify-between mb-3">
@@ -208,7 +208,7 @@ SENDER VERIFICATION:
           </div>
 
           {/* Right Column: Direct Contact Form */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/20 hover:border-violet-400/50 shadow-2xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.005]">
+          <div data-aos="fade-left" className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/20 hover:border-violet-400/50 shadow-2xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.005]">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2 text-xs font-mono text-violet-300 uppercase tracking-wider font-semibold">
                 <MessageSquare className="w-4 h-4" />

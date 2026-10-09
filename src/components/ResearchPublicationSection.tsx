@@ -17,7 +17,7 @@ export const ResearchPublicationSection: React.FC = () => {
       <div id="publication" className="absolute -top-24" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col mb-10">
+        <div data-aos="fade-up" className="flex flex-col mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white flex items-center gap-3">
             <span>Research & Publication</span>
             <span className="text-xs font-mono px-3 py-1 rounded-full bg-violet-950/70 text-violet-300 border border-violet-800/40 font-normal">
@@ -28,7 +28,11 @@ export const ResearchPublicationSection: React.FC = () => {
         </div>
 
         {/* Research Paper Feature Card */}
-        <div className="p-7 sm:p-10 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 relative overflow-hidden group cursor-default">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="p-7 sm:p-10 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 relative overflow-hidden group cursor-default"
+        >
           {/* Subtle paper watermark grid background */}
           <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
             <BookOpen className="w-64 h-64 text-violet-400" />
@@ -159,6 +163,8 @@ export const ResearchPublicationSection: React.FC = () => {
               {pipelineFlow.map((step, idx) => (
                 <div
                   key={idx}
+                  data-aos="zoom-in"
+                  data-aos-delay={`${200 + idx * 50}`}
                   className="p-3.5 rounded-xl bg-[#18112b] border border-purple-500/15 hover:border-violet-400/60 hover:shadow-lg hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] flex flex-col justify-between cursor-default group"
                 >
                   <div className="text-[10px] font-mono text-violet-400 mb-1">

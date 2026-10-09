@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
@@ -18,6 +20,16 @@ import { CosmicStarfield } from './components/CosmicStarfield';
 export default function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [isCommandOpen, setIsCommandOpen] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 750,
+      easing: 'ease-out-cubic',
+      once: false,
+      offset: 50,
+      delay: 50
+    });
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

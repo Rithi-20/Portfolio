@@ -7,7 +7,7 @@ export const EducationSection: React.FC = () => {
     <section id="education" className="py-20 relative bg-[#0d0918]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col mb-10">
+        <div data-aos="fade-up" className="flex flex-col mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             Where I Studied
           </h2>
@@ -17,7 +17,11 @@ export const EducationSection: React.FC = () => {
         {/* Education Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-6">
           {/* Main Undergraduate Degree Card (7 cols) */}
-          <div className="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/30 hover:border-violet-400/70 shadow-xl hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] flex flex-col justify-between relative overflow-hidden group cursor-default">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="750"
+            className="lg:col-span-7 p-7 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/30 hover:border-violet-400/70 shadow-xl hover:shadow-2xl hover:shadow-violet-500/25 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] flex flex-col justify-between relative overflow-hidden group cursor-default"
+          >
             <div className="absolute top-0 right-0 w-48 h-48 bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
 
             <div>
@@ -68,7 +72,11 @@ export const EducationSection: React.FC = () => {
           {/* Schooling Foundation Cards (5 cols) */}
           <div className="lg:col-span-5 space-y-5 flex flex-col justify-between">
             {/* HSC Card */}
-            <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/15 hover:border-violet-400/60 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 flex-1 flex flex-col justify-between group cursor-default">
+            <div
+              data-aos="fade-left"
+              data-aos-delay="100"
+              className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/15 hover:border-violet-400/60 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 flex-1 flex flex-col justify-between group cursor-default"
+            >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">
@@ -105,7 +113,11 @@ export const EducationSection: React.FC = () => {
             </div>
 
             {/* SSLC Card */}
-            <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/15 hover:border-purple-400/60 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 flex-1 flex flex-col justify-between group cursor-default">
+            <div
+              data-aos="fade-left"
+              data-aos-delay="200"
+              className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/15 hover:border-purple-400/60 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 flex-1 flex flex-col justify-between group cursor-default"
+            >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2">

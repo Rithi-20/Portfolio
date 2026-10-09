@@ -179,7 +179,7 @@ export const SkillsSection: React.FC = () => {
     <section id="skills" className="pt-8 pb-16 sm:pt-10 sm:pb-20 relative bg-[#0c0817]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col mb-8">
+        <div data-aos="fade-up" className="flex flex-col mb-8">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             What I Know
           </h2>
@@ -187,7 +187,7 @@ export const SkillsSection: React.FC = () => {
         </div>
 
         {/* Infinite Tech Marquee Row */}
-        <div className="overflow-hidden py-3 mb-10 border-y border-purple-500/15 bg-black/30">
+        <div data-aos="fade-up" data-aos-delay="100" className="overflow-hidden py-3 mb-10 border-y border-purple-500/15 bg-black/30">
           <div className="animate-marquee gap-3">
             {[...marqueeSkills, ...marqueeSkills].map((tech, idx) => (
               <span
@@ -202,7 +202,7 @@ export const SkillsSection: React.FC = () => {
         </div>
 
         {/* Domain Filter Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <div data-aos="fade-up" data-aos-delay="150" className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 scrollbar-none">
           <button
             type="button"
             onClick={() => setSelectedDomain('all')}
@@ -235,13 +235,15 @@ export const SkillsSection: React.FC = () => {
 
         {/* Grouped Skills Domain Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {filteredDomains.map((domain) => {
+          {filteredDomains.map((domain, dIdx) => {
             const Icon = domain.icon;
             const isFullWidth = domain.id === 'ai' && selectedDomain === 'all';
 
             return (
               <div
                 key={domain.id}
+                data-aos="fade-up"
+                data-aos-delay={`${150 + dIdx * 100}`}
                 className={`p-6 sm:p-7 rounded-2xl bg-[#140e24] border ${domain.borderColor} transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-1.5 hover:scale-[1.008] flex flex-col justify-between cursor-default ${
                   isFullWidth ? 'lg:col-span-2' : ''
                 }`}

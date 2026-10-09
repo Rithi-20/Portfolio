@@ -64,17 +64,21 @@ export const AboutSection: React.FC = () => {
     <section id="about" className="pt-16 pb-8 sm:pt-20 sm:pb-10 relative bg-[#0d0917]/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="flex flex-col mb-10">
+        <div data-aos="fade-up" className="flex flex-col mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             Who I Am
           </h2>
           <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
         </div>
 
-        {/* Top Split: Professional Summary on the Left & Quick Info Stack on the Right (Fahad & Nikhil Rajput Style) */}
+        {/* Top Split: Professional Summary on the Left & Quick Info Stack on the Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left: Rich Personal Narrative Card (7 cols) */}
-          <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] relative overflow-hidden flex flex-col justify-between group cursor-default">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="750"
+            className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] relative overflow-hidden flex flex-col justify-between group cursor-default"
+          >
             <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
 
             <div>
@@ -147,6 +151,8 @@ export const AboutSection: React.FC = () => {
               return (
                 <div
                   key={idx}
+                  data-aos="fade-left"
+                  data-aos-delay={`${150 + idx * 80}`}
                   onClick={detail.onClick}
                   className={`p-5 rounded-2xl border transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-violet-500/20 hover:-translate-y-2 hover:scale-[1.02] flex-1 flex flex-col justify-center ${detail.bgGlow} ${
                     detail.isInteractive

@@ -34,7 +34,7 @@ export const ExperienceSection: React.FC = () => {
     <section id="experience" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div data-aos="fade-up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               What I Did
@@ -75,7 +75,7 @@ export const ExperienceSection: React.FC = () => {
         </div>
 
         {/* Interactive Milestone Route Track (Clickable Dots) */}
-        <div className="mb-8 p-5 sm:p-6 rounded-2xl bg-[#140e24] border border-purple-500/20 shadow-xl relative overflow-hidden">
+        <div data-aos="fade-up" data-aos-delay="100" className="mb-8 p-5 sm:p-6 rounded-2xl bg-[#140e24] border border-purple-500/20 shadow-xl relative overflow-hidden">
           <div className="flex items-center justify-between text-xs font-mono text-purple-300/70 mb-5">
             <span className="flex items-center gap-1.5 uppercase tracking-wider font-semibold text-violet-300">
               <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
@@ -139,7 +139,7 @@ export const ExperienceSection: React.FC = () => {
 
         {/* View Mode 1: Spotlight Card (Lists the clicked dot's detailed experience) */}
         {viewMode === 'spotlight' && (
-          <div className="p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/25 shadow-2xl relative overflow-hidden transition-all duration-300 hover:border-violet-400/50">
+          <div data-aos="fade-up" data-aos-delay="150" className="p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/25 shadow-2xl relative overflow-hidden transition-all duration-300 hover:border-violet-400/50">
             {/* Top metadata row */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-5 border-b border-purple-500/15">
               <div>

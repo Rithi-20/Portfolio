@@ -24,7 +24,7 @@ export const CertificationsSection: React.FC = () => {
     <section id="certifications" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col mb-12">
+        <div data-aos="fade-up" className="flex flex-col mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             What I Achieved
           </h2>
@@ -33,9 +33,11 @@ export const CertificationsSection: React.FC = () => {
 
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {CERTIFICATIONS.map((cert) => (
+          {CERTIFICATIONS.map((cert, idx) => (
             <div
               key={cert.id}
+              data-aos="fade-up"
+              data-aos-delay={`${100 + idx * 75}`}
               className="p-6 rounded-2xl bg-[#140e24] hover:bg-[#1c1333] border border-purple-500/15 hover:border-violet-400/60 shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] flex flex-col justify-between group cursor-default"
             >
               <div>
