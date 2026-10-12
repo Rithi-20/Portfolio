@@ -33,7 +33,7 @@ export const PERSONAL_INFO = {
 export const QUICK_STATS = [
   { value: '8.42', label: 'B.E. CSE CGPA', subtext: 'Dr. N.G.P. Institute of Technology' },
   { value: '9 Months', label: 'Industry Dev Exp', subtext: 'Fuzionest (3m Intern + 6m Pro)' },
-  { value: '20+', label: 'Projects Built', subtext: 'AI, ML, RAG, Web & Analytics' },
+  { value: '15+', label: 'Projects Built', subtext: 'AI, ML, RAG, Web & Analytics' },
   { value: 'IEEE', label: 'Published Research', subtext: 'Presenter at IEEE ICESCS 2025' }
 ];
 
@@ -161,6 +161,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'LLM & AI Agent Copilot',
     categoryFilter: 'Agentic AI',
     badge: 'LLM Copilot',
+    imageUrl: '/projects/smartcrm-ai.png',
     isFeatured: true,
     shortProblem:
       'Sales and operations operators waste hours manually writing SQL queries or navigating complex CRM forms to inspect leads and log deals.',
@@ -194,6 +195,7 @@ export const ALL_PROJECTS: Project[] = [
     categoryFilter: 'AI / ML',
     badge: 'IEEE ICESCS 2025',
     conference: 'IEEE ICESCS 2025',
+    imageUrl: '/projects/greenmark.png',
     isFeatured: true,
     shortProblem:
       'Urban reforestation initiatives suffer over 70% sapling mortality due to absent longitudinal monitoring and unverifiable carbon credits.',
@@ -226,6 +228,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Healthcare AI & Grounded RAG',
     categoryFilter: 'Generative AI',
     badge: 'Hackathon 2024',
+    imageUrl: '/projects/medbot.png',
     isFeatured: true,
     shortProblem:
       'Individuals seeking initial context on sensitive health conditions (breast cancer, PCOD, stress) face fragmented internet advice or generative hallucinations.',
@@ -257,6 +260,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Cybersecurity & Machine Learning',
     categoryFilter: 'AI / ML',
     badge: 'ML Ensemble',
+    imageUrl: '/projects/ddos-detection.png',
     isFeatured: true,
     shortProblem:
       'Polymorphic distributed denial-of-service (DDoS) spikes flood server bandwidth, defeating static rule firewalls and causing downtime.',
@@ -288,6 +292,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Autonomous Agent Systems',
     categoryFilter: 'Agentic AI',
     badge: 'Multi-Agent',
+    imageUrl: '/projects/multiagent.png',
     isFeatured: true,
     shortProblem:
       'Complex multi-stage reasoning tasks fail when constrained to single monolithic prompts without distributed critique and verification roles.',
@@ -311,6 +316,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Deep Research & Synthesis',
     categoryFilter: 'Generative AI',
     badge: 'Deep Research',
+    imageUrl: '/projects/company-research-assistant.png',
     isFeatured: true,
     shortProblem:
       'Manual corporate due diligence and competitive market intelligence requires hours of combing disparate data sources and filings.',
@@ -333,6 +339,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'NLP & Ticket Automation',
     categoryFilter: 'Generative AI',
     badge: 'NLP Automation',
+    imageUrl: '/projects/ai-complaint-bot.png',
     isFeatured: false,
     shortProblem:
       'Customer support teams spend critical hours categorizing incoming grievances manually, delaying resolution for urgent escalations.',
@@ -349,13 +356,14 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Conversational AI Interface',
     categoryFilter: 'Generative AI',
     badge: 'Conversational AI',
+    imageUrl: '/projects/rithi-ai-assistant.png',
     isFeatured: false,
     shortProblem:
-      'Users require an intuitive, zero-latency conversational assistant with sleek glassmorphism aesthetics and responsive knowledge recall.',
+      'Users require an intuitive, zero-latency conversational assistant with sleek aesthetics and responsive knowledge recall.',
     solution:
-      'Constructed an interactive conversational assistant web interface providing prompt completion, dynamic reasoning assistance, and code explanations.',
+      'Constructed an interactive conversational assistant web interface providing prompt completion, dynamic reasoning assistance, and profile inquiry answering.',
     description:
-      'Interactive conversational AI interface delivering contextual query answering, prompt assistance, and knowledge retrieval with sleek glassmorphism UI.',
+      'Interactive conversational AI interface delivering contextual query answering, prompt assistance, and portfolio knowledge retrieval.',
     techStack: ['TypeScript', 'React', 'Tailwind CSS', 'LLM Integration'],
     githubUrl: 'https://github.com/Rithi-20/Rithi-Ai-Assistant'
   },
@@ -365,6 +373,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Healthcare & Full-Stack Web',
     categoryFilter: 'Backend',
     badge: 'Full-Stack Web',
+    imageUrl: '/projects/curalink.png',
     isFeatured: false,
     shortProblem:
       'Patients and clinics struggle with cumbersome booking experiences and disconnected medical appointment management systems.',
@@ -381,6 +390,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Financial Analytics & Web',
     categoryFilter: 'Backend',
     badge: 'Financial Analytics',
+    imageUrl: '/projects/financial-health.png',
     isFeatured: false,
     shortProblem:
       'Individuals lack clear visualization of budgeting ratios, debt-to-income balance, and long-term liquidity benchmarks.',
@@ -393,51 +403,20 @@ export const ALL_PROJECTS: Project[] = [
   },
   {
     id: 'risk-management-bot',
-    title: 'Risk Management Alert Bot',
-    category: 'Automation & Monitoring',
-    categoryFilter: 'Backend',
-    badge: 'Telegram Bot',
-    isFeatured: false,
-    shortProblem:
-      'Operational teams experience delayed awareness when risk metrics or system health indicators fluctuate beyond safe operational envelopes.',
-    solution:
-      'Built an automated risk assessment bot that monitors fluctuating metrics against calibrated thresholds and dispatches instantaneous alerts via Telegram.',
-    description:
-      'Automated risk analysis and notification bot. Monitored risk metrics, compared incoming data against calibrated rules, and issued automated notifications to decision makers.',
-    techStack: ['Python', 'Rule Engines', 'REST APIs', 'Telegram Bot API'],
-    githubUrl: 'https://github.com/Rithi-20/Risk-management-bot'
-  },
-  {
-    id: 'face-recognizer',
-    title: 'Biometric Face Recognizer',
-    category: 'Computer Vision & Biometrics',
+    title: 'GenAI Legal Co-Pilot & Risk Management Assistant',
+    category: 'Legal Tech & Risk Management',
     categoryFilter: 'AI / ML',
-    badge: 'OpenCV Vision',
+    badge: 'Legal Risk Co-Pilot',
+    imageUrl: '/projects/risk-management-bot.png',
     isFeatured: false,
     shortProblem:
-      'Physical attendance and identity verification systems require low-latency biometric recognition capable of running on edge hardware.',
+      'SMEs and business teams spend critical hours reviewing lengthy contracts manually, frequently missing high-risk clauses or operational liabilities.',
     solution:
-      'Developed a real-time computer vision pipeline utilizing OpenCV cascade classifiers and facial feature encodings for fast face detection and identification.',
+      'Engineered an AI-powered legal risk analysis dashboard performing automated contract ingestion, instant clause risk detection, and plain-English negotiation counter-strategies.',
     description:
-      'Real-time facial recognition and biometric detection system implementing OpenCV cascade classifiers and feature matching pipelines in Python.',
-    techStack: ['Python', 'OpenCV', 'Computer Vision', 'Image Processing'],
-    githubUrl: 'https://github.com/Rithi-20/Face_recognizer'
-  },
-  {
-    id: 'social-media-bot',
-    title: 'Social Media Automation Engine',
-    category: 'Social APIs & Automation',
-    categoryFilter: 'Backend',
-    badge: 'Task Automation',
-    isFeatured: false,
-    shortProblem:
-      'Managing scheduled content distributions across social channels involves repetitive manual overhead and inconsistent timing.',
-    solution:
-      'Programmed an automation bot to manage scheduled queue dispatch, payload formatting, and engagement tracking via programmatic webhooks.',
-    description:
-      'Automated scheduler and content distribution bot streamlining multi-platform social workflows, scheduled posts, and audience updates.',
-    techStack: ['Python', 'REST APIs', 'Webhooks', 'Task Scheduling'],
-    githubUrl: 'https://github.com/Rithi-20/Social-Media-Bot'
+      'GenAI Legal Assistant and Risk Management Co-Pilot designed to analyze contracts, detect critical legal & operational risks, provide plain-English clause simplifications, and suggest negotiation counter-strategies.',
+    techStack: ['Python', 'Streamlit', 'NLP', 'GenAI', 'Contract Analysis', 'Risk Scoring'],
+    githubUrl: 'https://github.com/Rithi-20/Risk-management-bot'
   },
   {
     id: 'binance-analytics',
@@ -445,6 +424,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Financial ML & Data',
     categoryFilter: 'AI / ML',
     badge: 'Market Analytics',
+    imageUrl: '/projects/binance-analytics.png',
     isFeatured: false,
     shortProblem:
       'Cryptocurrency markets exhibit rapid volatility where manual technical indicator evaluation is prone to delay and emotional bias.',
@@ -456,43 +436,12 @@ export const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Rithi-20/Binance'
   },
   {
-    id: 'ecommerce-dashboard',
-    title: 'Ecommerce Analytics Dashboard',
-    category: 'Business Intelligence & Web',
-    categoryFilter: 'Backend',
-    badge: 'Analytics UI',
-    isFeatured: false,
-    shortProblem:
-      'Store managers lack unified visibility across real-time order volume, product margins, and customer cohort repeat rates.',
-    solution:
-      'Built a responsive administrative dashboard interface providing interactive graphs, inventory tracking filters, and revenue metrics visualization.',
-    description:
-      'Interactive sales analytics platform visualizing revenue trends, inventory levels, order distributions, and customer acquisition metrics.',
-    techStack: ['JavaScript', 'React', 'Chart.js', 'CSS'],
-    githubUrl: 'https://github.com/Rithi-20/Ecommerce-dashboard'
-  },
-  {
-    id: 'ml-algorithm',
-    title: 'ML Algorithms from Scratch',
-    category: 'Core Mathematical AI',
-    categoryFilter: 'AI / ML',
-    badge: 'Core ML',
-    isFeatured: false,
-    shortProblem:
-      'Relying solely on high-level libraries without implementing core gradient descent and cost functions leads to shallow architectural intuition.',
-    solution:
-      'Implemented fundamental machine learning algorithms (linear regression, logistic regression, k-NN, k-Means, SVM concepts) using pure Python and NumPy matrix algebra.',
-    description:
-      'Handcrafted implementations of fundamental machine learning algorithms from scratch, demonstrating mathematical mechanics behind regression, classification, and clustering.',
-    techStack: ['Python', 'NumPy', 'Matrix Calculus', 'Linear Algebra'],
-    githubUrl: 'https://github.com/Rithi-20/ML_Algorithm'
-  },
-  {
     id: 'aerohome-bi',
     title: 'AeroHome Production Performance Dashboard',
     category: 'Power BI & Operations Analytics',
     categoryFilter: 'Data Analytics',
     badge: 'Power BI Executive',
+    imageUrl: '/projects/aerohome-bi.png',
     isFeatured: true,
     shortProblem:
       'Manufacturing leaders struggled to understand the operational gap between planned and actual production, unable to isolate which plants, downtime causes, or supplier delays caused shortfalls.',
@@ -523,6 +472,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Advanced Excel & Retail Analytics',
     categoryFilter: 'Data Analytics',
     badge: 'Excel Analytics',
+    imageUrl: '/projects/trendkart-excel.png',
     isFeatured: true,
     shortProblem:
       'TrendKart experienced a sharp 30.6% MoM revenue contraction in November 2024 (dropping from ₹15.19L in Oct to ₹10.54L), requiring root-cause sales decomposition.',
@@ -553,6 +503,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Power BI & Industrial Intelligence',
     categoryFilter: 'Data Analytics',
     badge: 'Power BI Dashboard',
+    imageUrl: '/projects/novatech-bi.png',
     isFeatured: false,
     shortProblem:
       'NovaTech recorded an unexpected manufacturing contraction in June 2025 compared to May 2025, needing multi-plant operational analysis.',
@@ -569,6 +520,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'SQL & Healthcare Relational Analytics',
     categoryFilter: 'Data Analytics',
     badge: 'SQL Analytics',
+    imageUrl: '/projects/healthplus-sql.png',
     isFeatured: false,
     shortProblem:
       'HealthPlus clinics struggled with unbalanced patient consultation loads, specialty bottlenecks, and opaque billing revenue distribution.',
@@ -585,6 +537,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'Advanced Excel & Profitability Modeling',
     categoryFilter: 'Data Analytics',
     badge: 'Excel Modeling',
+    imageUrl: '/projects/freshmart-excel.png',
     isFeatured: false,
     shortProblem:
       'FreshMart lacked consolidated transparency into product profit margins versus discount erosion across diverse sales channels and product lines.',
@@ -601,6 +554,7 @@ export const ALL_PROJECTS: Project[] = [
     category: 'SQL & Hospital Capacity Analytics',
     categoryFilter: 'Data Analytics',
     badge: 'SQL Database',
+    imageUrl: '/projects/medicare-sql.jpg',
     isFeatured: false,
     shortProblem:
       'Hospital networks faced chronic appointment scheduling delays and suboptimal bed capacity allocation across in-demand medical specialties.',
@@ -632,6 +586,14 @@ export const CERTIFICATIONS: Certification[] = [
     year: '2024',
     credentialBadge: 'Elite + Silver',
     description: 'Comprehensive study of distributed computing architectures, cloud virtualization, resource orchestration, and storage patterns.'
+  },
+  {
+    id: 'azure-fundamentals',
+    title: 'Microsoft Azure Fundamentals',
+    organization: 'Pinesphere Solutions',
+    year: '2024',
+    credentialBadge: 'Azure Fundamentals',
+    description: 'Completed a 40-hour Microsoft Azure Fundamentals Value Added Course covering core cloud computing concepts, Azure architecture, security, and cloud services.'
   },
   {
     id: 'blockchain',

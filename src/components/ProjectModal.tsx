@@ -69,6 +69,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </button>
         </div>
 
+        {/* Project Interface Showcase Screenshot */}
+        {project.imageUrl && (
+          <div className="px-6 pt-5 pb-3 bg-[#100a1f] border-b border-purple-500/15">
+            <div className="relative rounded-xl overflow-hidden border border-purple-500/30 shadow-2xl bg-black/40">
+              <img
+                src={project.imageUrl}
+                alt={`${project.title} Interface`}
+                className="w-full h-auto max-h-[300px] sm:max-h-[340px] object-cover object-top"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Modal Navigation Tabs */}
         {project.overviewTabs && (
           <div className="flex items-center gap-1 p-2 bg-[#0e091b] border-b border-purple-500/15 overflow-x-auto scrollbar-none text-xs">

@@ -11,6 +11,7 @@ export interface Project {
   githubUrl: string;
   liveDemoUrl?: string;
   paperUrl?: string;
+  imageUrl?: string;
   isFeatured: boolean;
   conference?: string;
   architectureSteps?: { label: string; detail: string }[];

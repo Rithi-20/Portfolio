@@ -312,6 +312,19 @@ export const ProjectsSection: React.FC = () => {
                         </div>
                       </div>
 
+                      {/* Live Interface Screenshot Preview */}
+                      {activeProject.imageUrl && (
+                        <div className="relative mb-5 rounded-xl overflow-hidden border border-purple-500/25 group/img bg-[#0a0614]">
+                          <img
+                            src={activeProject.imageUrl}
+                            alt={`${activeProject.title} Interface Preview`}
+                            className="w-full h-44 sm:h-56 object-cover object-top transition-transform duration-500 group-hover/img:scale-[1.02]"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#140e26] via-transparent to-transparent opacity-30 pointer-events-none" />
+                        </div>
+                      )}
+
                       {/* Title */}
                       <h3 className="text-xl sm:text-3xl font-extrabold text-white mb-3 group-hover:text-violet-300 transition-colors">
                         {activeProject.title}
@@ -510,6 +523,19 @@ export const ProjectsSection: React.FC = () => {
                           )}
                         </div>
                       </div>
+
+                      {/* Project Image Banner */}
+                      {project.imageUrl && (
+                        <div className="relative mb-3.5 rounded-xl overflow-hidden border border-purple-500/20 group-hover:border-violet-400/50 bg-[#0d071a]">
+                          <img
+                            src={project.imageUrl}
+                            alt={`${project.title} Preview`}
+                            className="w-full h-36 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#140e24]/80 via-transparent to-transparent opacity-40 pointer-events-none" />
+                        </div>
+                      )}
 
                       {/* Project Title */}
                       <h3 className="text-lg font-bold text-white group-hover:text-violet-300 transition-colors mb-2">

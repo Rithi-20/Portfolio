@@ -129,12 +129,12 @@ export const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose, onOpe
     },
     {
       id: 'resume',
-      name: 'Download / View Resume',
+      name: 'View Resume (PDF)',
       category: 'Action',
       icon: <FileText className="w-4 h-4 text-violet-300" />,
       action: () => {
         onClose();
-        onOpenResume();
+        window.open('/resume.pdf', '_blank');
       }
     },
     {

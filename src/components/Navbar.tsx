@@ -161,14 +161,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
               </a>
 
               {/* Resume CTA */}
-              <button
-                type="button"
-                onClick={onOpenResume}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:from-violet-200 hover:to-purple-200 rounded-lg shadow-sm shadow-violet-500/20 hover:shadow-violet-400/40 transition-all duration-200 cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>Resume</span>
-              </button>
+              </a>
 
               {/* Mobile Menu Button */}
               <button
@@ -205,6 +206,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                   </a>
                 );
               })}
+
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 shadow-sm cursor-pointer mt-1"
+              >
+                <FileText className="w-4 h-4" />
+                <span>View Resume PDF</span>
+              </a>
 
               <div className="pt-4 mt-2 border-t border-purple-500/20 grid grid-cols-3 gap-2">
                 <a

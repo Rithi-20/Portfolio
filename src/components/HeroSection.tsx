@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Github, Linkedin, Box, Send, Download, ArrowRight, MapPin } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Box, Send, Download, ArrowRight, MapPin, FileText } from 'lucide-react';
 import { PERSONAL_INFO, ALL_PROJECTS } from '../data/portfolioData';
 import { LeetCodeIcon } from './LeetCodeIcon';
 
@@ -42,7 +42,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
       subtext: 'Fuzionest (3m Intern + 6m Pro)'
     },
     {
-      value: '20+',
+      value: '15+',
       label: 'Projects Built',
       subtext: 'AI, ML & Web Systems'
     },
@@ -146,18 +146,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:opacity-95 transition-all duration-200 shadow-xl shadow-violet-500/25 hover:shadow-violet-400/40 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
             <Box className="w-4 h-4" />
-            <span>Explore 3D Projects (20+)</span>
+            <span>Explore 3D Projects (15+)</span>
             <ArrowRight className="w-4 h-4 ml-1" />
           </button>
 
-          <button
-            type="button"
-            onClick={onOpenResume}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-violet-200 hover:text-white bg-violet-950/40 hover:bg-violet-900/40 border border-violet-800/50 hover:border-violet-500/60 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
-            <Download className="w-4 h-4 text-violet-400" />
+            <FileText className="w-4 h-4 text-violet-400" />
             <span>View Resume PDF</span>
-          </button>
+          </a>
 
           <button
             type="button"

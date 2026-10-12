@@ -9,6 +9,8 @@ export const CertificationsSection: React.FC = () => {
         return <ShieldCheck className="w-5 h-5 text-emerald-400" />;
       case 'cloud-computing':
         return <Cloud className="w-5 h-5 text-violet-400" />;
+      case 'azure-fundamentals':
+        return <Cloud className="w-5 h-5 text-sky-400" />;
       case 'blockchain':
         return <Blocks className="w-5 h-5 text-purple-400" />;
       case 'salesforce':

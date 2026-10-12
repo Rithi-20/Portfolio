@@ -11,12 +11,6 @@ import {
   Boxes
 } from 'lucide-react';
 
-interface SkillItem {
-  name: string;
-  tag?: string;
-  desc?: string;
-}
-
 interface SkillDomain {
   id: string;
   title: string;
@@ -26,7 +20,7 @@ interface SkillDomain {
   accentColor: string;
   borderColor: string;
   badgeBg: string;
-  skills: SkillItem[];
+  skills: string[];
 }
 
 export const SkillsSection: React.FC = () => {
@@ -69,17 +63,17 @@ export const SkillsSection: React.FC = () => {
       borderColor: 'border-violet-500/30 hover:border-violet-400/60',
       badgeBg: 'bg-violet-950/70 text-violet-200 border-violet-800/40',
       skills: [
-        { name: 'RAG Architectures (FAISS)', desc: 'Vector search & grounded context retrieval' },
-        { name: 'Machine Learning', desc: 'Supervised/unsupervised algorithms & anomaly detection' },
-        { name: 'Deep Learning', desc: 'Neural network training & inference' },
-        { name: 'Large Language Models (LLMs)', desc: 'Qwen2.5, prompt design & tool-calling' },
-        { name: 'LangChain & Multi-Agents', desc: 'Deterministic autonomous workflows' },
-        { name: 'Natural Language Processing (NLP)', desc: 'Tokenization, embeddings & semantics' },
-        { name: 'Computer Vision (OpenCV)', desc: 'Image diagnosis & feature extraction' },
-        { name: 'Scikit-learn', desc: 'Random Forest, SVM & ensemble classifiers' },
-        { name: 'PyTorch & TensorFlow', desc: 'Deep learning model experimentation' },
-        { name: 'Hugging Face Transformers', desc: 'Pre-trained open-source models & tokenizers' },
-        { name: 'NumPy & Pandas', desc: 'High-performance array mathematics & data cleaning' }
+        'RAG Architectures (FAISS)',
+        'Machine Learning',
+        'Deep Learning',
+        'Large Language Models (LLMs)',
+        'LangChain & Multi-Agents',
+        'Natural Language Processing (NLP)',
+        'Computer Vision (OpenCV)',
+        'Scikit-learn',
+        'PyTorch & TensorFlow',
+        'Hugging Face Transformers',
+        'NumPy & Pandas'
       ]
     },
     {
@@ -92,12 +86,12 @@ export const SkillsSection: React.FC = () => {
       borderColor: 'border-purple-500/30 hover:border-violet-400/60',
       badgeBg: 'bg-purple-950/70 text-violet-200 border-purple-800/40',
       skills: [
-        { name: 'Power BI', desc: 'Interactive executive reporting, DAX measures & KPI dashboards' },
-        { name: 'Advanced Excel', desc: 'Pivot tables, dynamic slicers, MoM variance models & financial formulas' },
-        { name: 'SQL & Database Analytics', desc: 'Complex multi-table joins, aggregations & query optimization' },
-        { name: 'DAX Measures', desc: 'Calculated metrics, time intelligence & dynamic variance modeling' },
-        { name: 'Data Modeling (Star Schema)', desc: 'Dimensional relationship architecture & table normalization' },
-        { name: 'Pandas & NumPy', desc: 'Exploratory data analysis, cohort breakdown & cleaning pipelines' }
+        'Power BI',
+        'Advanced Excel',
+        'SQL & Database Analytics',
+        'DAX Measures',
+        'Data Modeling (Star Schema)',
+        'Pandas & NumPy'
       ]
     },
     {
@@ -110,10 +104,10 @@ export const SkillsSection: React.FC = () => {
       borderColor: 'border-purple-500/30 hover:border-purple-400/60',
       badgeBg: 'bg-purple-950/70 text-purple-200 border-purple-800/40',
       skills: [
-        { name: 'FastAPI', desc: 'High-throughput async Python endpoints for ML/LLM services' },
-        { name: 'Node.js & Express.js', desc: 'Event-driven server runtimes & REST routes' },
-        { name: 'RESTful APIs', desc: 'Standardized client-server contracts & JSON payloads' },
-        { name: 'Flask', desc: 'Lightweight web framework for ML dashboards & services' }
+        'FastAPI',
+        'Node.js & Express.js',
+        'RESTful APIs',
+        'Flask'
       ]
     },
     {
@@ -126,11 +120,11 @@ export const SkillsSection: React.FC = () => {
       borderColor: 'border-emerald-500/30 hover:border-emerald-400/60',
       badgeBg: 'bg-emerald-950/70 text-emerald-300 border-emerald-800/40',
       skills: [
-        { name: 'Python', desc: 'Primary language for AI, ML & backend services' },
-        { name: 'JavaScript', desc: 'Modern web scripting & asynchronous logic' },
-        { name: 'Java', desc: 'Object-oriented programming & data structures' },
-        { name: 'Data Structures & Algorithms', desc: 'Algorithmic problem solving on LeetCode (@rithi_2007)' },
-        { name: 'HTML5 & CSS3', desc: 'Accessible, responsive semantic structures' }
+        'Python',
+        'JavaScript',
+        'Java',
+        'Data Structures & Algorithms',
+        'HTML5 & CSS3'
       ]
     },
     {
@@ -143,11 +137,11 @@ export const SkillsSection: React.FC = () => {
       borderColor: 'border-amber-500/30 hover:border-amber-400/60',
       badgeBg: 'bg-amber-950/70 text-amber-300 border-amber-800/40',
       skills: [
-        { name: 'MySQL', desc: 'Relational schema modeling, queries & indexing' },
-        { name: 'MongoDB', desc: 'NoSQL document storage & JSON records' },
-        { name: 'SQLite', desc: 'Embedded relational DB for lightweight tools' },
-        { name: 'FAISS Vector Index', desc: 'Sub-millisecond similarity search for RAG' },
-        { name: 'MySQL Workbench & XAMPP', desc: 'Database administration & local environments' }
+        'MySQL',
+        'MongoDB',
+        'SQLite',
+        'FAISS Vector Index',
+        'MySQL Workbench & XAMPP'
       ]
     },
     {
@@ -160,12 +154,11 @@ export const SkillsSection: React.FC = () => {
       borderColor: 'border-fuchsia-500/30 hover:border-fuchsia-400/60',
       badgeBg: 'bg-fuchsia-950/70 text-fuchsia-200 border-fuchsia-800/40',
       skills: [
-        { name: 'Git & GitHub', desc: 'Version control, branching & open-source workflows' },
-        { name: 'Postman', desc: 'API testing, parameter verification & mocking' },
-        { name: 'Docker', desc: 'Containerization & deployment consistency' },
-        { name: 'VS Code', desc: 'Primary IDE for Python & full-stack development' },
-        { name: 'Google Colab', desc: 'Cloud GPU model training & notebook experiments' },
-        { name: 'Power BI & Excel', desc: 'Data visualization & business reporting' }
+        'Git & GitHub',
+        'Postman',
+        'Docker',
+        'VS Code',
+        'Google Colab'
       ]
     }
   ];
@@ -237,20 +230,17 @@ export const SkillsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredDomains.map((domain, dIdx) => {
             const Icon = domain.icon;
-            const isFullWidth = domain.id === 'ai' && selectedDomain === 'all';
 
             return (
               <div
                 key={domain.id}
                 data-aos="fade-up"
                 data-aos-delay={`${150 + dIdx * 100}`}
-                className={`p-6 sm:p-7 rounded-2xl bg-[#140e24] border ${domain.borderColor} transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-1.5 hover:scale-[1.008] flex flex-col justify-between cursor-default ${
-                  isFullWidth ? 'lg:col-span-2' : ''
-                }`}
+                className={`p-6 sm:p-7 rounded-2xl bg-[#140e24] border ${domain.borderColor} transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-1.5 flex flex-col justify-between cursor-default`}
               >
                 <div>
                   {/* Category Header */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-purple-500/15">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-3 border-b border-purple-500/15">
                     <div className="flex items-center gap-3">
                       <div className={`p-2.5 rounded-xl bg-white/[0.03] border border-purple-500/15 ${domain.accentColor}`}>
                         <Icon className="w-5 h-5" />
@@ -270,29 +260,20 @@ export const SkillsSection: React.FC = () => {
                       </div>
                     </div>
 
-                    <span className="text-xs font-mono text-purple-400/60">
-                      {domain.skills.length} Technologies
+                    <span className="text-xs font-mono text-purple-400/60 hidden sm:inline-block">
+                      {domain.skills.length} Skills
                     </span>
                   </div>
 
-                  {/* Skills Tag Pills with Descriptions */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 pt-1">
+                  {/* Skills Tag Badges Properly Aligned */}
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1">
                     {domain.skills.map((skill, sIdx) => (
                       <div
                         key={sIdx}
-                        className="p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10 hover:border-violet-400/50 hover:shadow-md hover:shadow-violet-500/15 transition-all duration-200 hover:-translate-y-1 hover:scale-[1.02] flex flex-col justify-between group cursor-default"
+                        className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/[0.025] hover:bg-violet-950/40 border border-purple-500/15 hover:border-violet-400/50 hover:shadow-md hover:shadow-violet-500/20 text-xs sm:text-sm font-mono font-medium text-purple-100 hover:text-white transition-all duration-200 hover:-translate-y-0.5 cursor-default group"
                       >
-                        <div className="flex items-center justify-between gap-1 mb-1">
-                          <span className="text-xs font-mono font-bold text-purple-100 group-hover:text-violet-200 transition-colors">
-                            {skill.name}
-                          </span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all" />
-                        </div>
-                        {skill.desc && (
-                          <p className="text-[11px] text-purple-300/70 leading-snug">
-                            {skill.desc}
-                          </p>
-                        )}
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-80 group-hover:opacity-100 group-hover:scale-125 group-hover:bg-violet-300 transition-all flex-shrink-0" />
+                        <span>{skill}</span>
                       </div>
                     ))}
                   </div>
