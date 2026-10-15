@@ -73,33 +73,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#0c0816]/85 backdrop-blur-md border-b border-purple-500/10 py-3.5 shadow-lg shadow-black/40'
-            : 'bg-transparent py-5'
+            ? 'bg-[#0c0816]/90 backdrop-blur-md border-b border-purple-500/10 py-2.5 shadow-lg shadow-black/40'
+            : 'bg-transparent py-3 sm:py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo / Monogram */}
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="flex items-center gap-2.5 group"
+              className="flex items-center gap-2 group"
             >
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold font-mono tracking-tight text-sm shadow-md shadow-violet-500/30 group-hover:scale-105 transition-transform duration-200">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold font-mono tracking-tight text-xs shadow-md shadow-violet-500/30 group-hover:scale-105 transition-transform duration-200">
                 RU
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold tracking-tight text-white group-hover:text-violet-300 transition-colors">
+                <span className="text-xs sm:text-[13px] font-bold tracking-tight text-white group-hover:text-violet-300 transition-colors leading-tight">
                   RITHIHA U
                 </span>
-                <span className="text-[10px] font-mono text-purple-300/70 tracking-wider">
+                <span className="text-[9px] font-mono text-purple-300/70 tracking-wider">
                   AI & SOFTWARE
                 </span>
               </div>
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center gap-1 bg-[#140e24]/70 border border-purple-500/15 rounded-full px-3 py-1.5 backdrop-blur-sm">
+            <nav className="hidden xl:flex items-center gap-0.5 bg-[#140e24]/70 border border-purple-500/15 rounded-full px-2.5 py-1 backdrop-blur-sm">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
@@ -107,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                     key={link.id}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className={`px-3 py-1 text-xs font-medium rounded-full transition-all duration-200 ${
+                    className={`px-2.5 py-0.5 text-[11px] font-medium rounded-full transition-all duration-200 ${
                       isActive
                         ? 'text-violet-200 bg-violet-600/30 border border-violet-500/40 shadow-sm'
                         : 'text-purple-200/80 hover:text-white hover:bg-white/[0.04]'
@@ -120,14 +120,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
             </nav>
 
             {/* Right actions: Command Palette, Resume, Mobile toggle */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               {/* GitHub Profile Link */}
               <a
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-violet-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
+                className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-violet-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
                 title="GitHub"
               >
                 <Github className="w-3.5 h-3.5 text-violet-400" />
@@ -140,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-violet-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
+                className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-violet-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
                 title="LinkedIn"
               >
                 <Linkedin className="w-3.5 h-3.5 text-violet-400" />
@@ -153,7 +153,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LeetCode Profile"
-                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-amber-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
+                className="hidden md:inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono text-purple-200 hover:text-white bg-[#140e24]/80 hover:bg-[#1f1537] border border-purple-500/20 hover:border-amber-400/50 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
                 title="LeetCode"
               >
                 <LeetCodeIcon className="w-3.5 h-3.5 text-amber-400" />
@@ -165,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommand, onOpenResume }) =
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:from-violet-200 hover:to-purple-200 rounded-lg shadow-sm shadow-violet-500/20 hover:shadow-violet-400/40 transition-all duration-200 cursor-pointer"
+                className="flex items-center gap-1 px-3 py-1 text-xs font-semibold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:from-violet-200 hover:to-purple-200 rounded-lg shadow-sm shadow-violet-500/20 hover:shadow-violet-400/40 transition-all duration-200 cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>Resume</span>

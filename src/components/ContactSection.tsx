@@ -91,22 +91,22 @@ SENDER VERIFICATION:
   };
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 sm:py-16 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div data-aos="fade-up" className="flex flex-col mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        <div data-aos="fade-up" className="flex flex-col mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
             How to Reach Me
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
+          <div className="w-10 h-0.5 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-2" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           {/* Left Column: Direct channels and Fast actions */}
-          <div data-aos="fade-right" className="lg:col-span-5 space-y-4">
+          <div data-aos="fade-right" className="lg:col-span-5 space-y-3.5">
             {/* Email Action Card */}
-            <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] cursor-default">
-              <div className="flex items-center justify-between mb-3">
+            <div className="p-4.5 sm:p-5 rounded-xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] cursor-default">
+              <div className="flex items-center justify-between mb-2.5">
                 <span className="text-xs font-mono text-violet-300 uppercase tracking-wider font-semibold">
                   Primary Email
                 </span>
@@ -116,7 +116,7 @@ SENDER VERIFICATION:
                 </span>
               </div>
 
-              <div className="text-sm sm:text-base font-mono text-white mb-4 break-all font-semibold">
+              <div className="text-xs sm:text-sm font-mono text-white mb-3.5 break-all font-semibold">
                 {PERSONAL_INFO.email}
               </div>
 
@@ -150,8 +150,8 @@ SENDER VERIFICATION:
             </div>
 
             {/* Social channels card */}
-            <div className="p-6 rounded-2xl bg-[#140e24] border border-purple-500/15 hover:border-violet-400/50 shadow-lg hover:shadow-xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] space-y-3 cursor-default">
-              <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">
+            <div className="p-4.5 sm:p-5 rounded-xl bg-[#140e24] border border-purple-500/15 hover:border-violet-400/50 shadow-lg hover:shadow-xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] space-y-2.5 cursor-default">
+              <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1.5">
                 Professional Networks
               </div>
 
@@ -159,11 +159,11 @@ SENDER VERIFICATION:
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
+                className="flex items-center justify-between p-2.5 rounded-lg bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
                   <Linkedin className="w-4 h-4 text-violet-400" />
-                  <span className="text-sm font-semibold text-white group-hover:text-violet-300 transition-colors">
+                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-violet-300 transition-colors">
                     LinkedIn Profile
                   </span>
                 </div>
@@ -174,11 +174,11 @@ SENDER VERIFICATION:
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
+                className="flex items-center justify-between p-2.5 rounded-lg bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
                   <Github className="w-4 h-4 text-slate-200" />
-                  <span className="text-sm font-semibold text-white group-hover:text-violet-300 transition-colors">
+                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-violet-300 transition-colors">
                     GitHub Profile
                   </span>
                 </div>
@@ -189,37 +189,37 @@ SENDER VERIFICATION:
                 href={PERSONAL_INFO.leetcode}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
+                className="flex items-center justify-between p-2.5 rounded-lg bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.04] transition-colors group"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
                   <LeetCodeIcon className="w-4 h-4 text-amber-400" />
-                  <span className="text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">
+                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-amber-300 transition-colors">
                     LeetCode Profile
                   </span>
                 </div>
                 <span className="text-xs font-mono text-amber-300/80">rithi_2007</span>
               </a>
 
-              <div className="flex items-center gap-2 p-3 text-xs font-mono text-slate-400">
-                <MapPin className="w-4 h-4 text-violet-400" />
+              <div className="flex items-center gap-2 p-2.5 text-xs font-mono text-slate-400">
+                <MapPin className="w-3.5 h-3.5 text-violet-400" />
                 <span>{PERSONAL_INFO.location}</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Direct Contact Form */}
-          <div data-aos="fade-left" className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/20 hover:border-violet-400/50 shadow-2xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.005]">
-            <div className="flex items-center justify-between mb-6">
+          <div data-aos="fade-left" className="lg:col-span-7 p-5 sm:p-6 rounded-xl bg-[#140e24] border border-purple-500/20 hover:border-violet-400/50 shadow-2xl hover:shadow-violet-500/15 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.005]">
+            <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2 text-xs font-mono text-violet-300 uppercase tracking-wider font-semibold">
                 <MessageSquare className="w-4 h-4" />
                 <span>Send a Direct Message</span>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-mono text-slate-300 mb-1.5">
+                  <label htmlFor="name" className="block text-xs font-mono text-slate-300 mb-1">
                     Your Name *
                   </label>
                   <input
@@ -229,12 +229,12 @@ SENDER VERIFICATION:
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Smith"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
+                    className="w-full px-3 py-2 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs font-mono text-slate-300 mb-1.5">
+                  <label htmlFor="email" className="block text-xs font-mono text-slate-300 mb-1">
                     Your Email *
                   </label>
                   <input
@@ -244,16 +244,16 @@ SENDER VERIFICATION:
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@company.com"
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
+                    className="w-full px-3 py-2 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                   />
-                  <div className="text-[11px] font-mono text-purple-300/60 mt-1">
+                  <div className="text-[10px] font-mono text-purple-300/60 mt-0.5">
                     Configured as verified From, Reply-To &amp; CC
                   </div>
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-xs font-mono text-slate-300 mb-1.5">
+                <label htmlFor="subject" className="block text-xs font-mono text-slate-300 mb-1">
                   Subject / Inquiring About *
                 </label>
                 <input
@@ -263,12 +263,12 @@ SENDER VERIFICATION:
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder="Enter any subject..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
+                  className="w-full px-3 py-2 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-mono text-slate-300 mb-1.5">
+                <label htmlFor="message" className="block text-xs font-mono text-slate-300 mb-1">
                   Message *
                 </label>
                 <textarea
@@ -278,16 +278,16 @@ SENDER VERIFICATION:
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Share details about the role, project requirements, or opportunity..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all resize-none"
+                  className="w-full px-3 py-2 rounded-lg bg-[#0e091b] border border-purple-500/20 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 transition-all resize-none"
                 />
               </div>
 
-              <div className="pt-2">
+              <div className="pt-1.5">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-sm font-bold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:from-violet-200 hover:to-purple-200 transition-all cursor-pointer shadow-lg shadow-violet-500/25"
+                  className="inline-flex items-center justify-center gap-2 px-4.5 py-2 rounded-lg text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-violet-300 via-purple-300 to-fuchsia-300 hover:from-violet-200 hover:to-purple-200 transition-all cursor-pointer shadow-lg shadow-violet-500/25"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-3.5 h-3.5" />
                   <span>Send Message via Email</span>
                 </button>
               </div>

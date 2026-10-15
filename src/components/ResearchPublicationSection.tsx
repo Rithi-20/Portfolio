@@ -13,25 +13,25 @@ export const ResearchPublicationSection: React.FC = () => {
   ];
 
   return (
-    <section id="research" className="py-24 relative bg-[#0c0816]/95">
+    <section id="research" className="py-12 sm:py-16 relative bg-[#0c0816]/95">
       <div id="publication" className="absolute -top-24" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div data-aos="fade-up" className="flex flex-col mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white flex items-center gap-3">
+        <div data-aos="fade-up" className="flex flex-col mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
             <span>Research & Publication</span>
-            <span className="text-xs font-mono px-3 py-1 rounded-full bg-violet-950/70 text-violet-300 border border-violet-800/40 font-normal">
+            <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-violet-950/70 text-violet-300 border border-violet-800/40 font-normal">
               IEEE ICESCS 2025
             </span>
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
+          <div className="w-10 h-0.5 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-2" />
         </div>
 
         {/* Research Paper Feature Card */}
         <div
           data-aos="fade-up"
           data-aos-delay="100"
-          className="p-7 sm:p-10 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 relative overflow-hidden group cursor-default"
+          className="p-5 sm:p-7 rounded-2xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 relative overflow-hidden group cursor-default"
         >
           {/* Subtle paper watermark grid background */}
           <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
@@ -39,20 +39,20 @@ export const ResearchPublicationSection: React.FC = () => {
           </div>
 
           {/* Top metadata row */}
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-6 border-b border-white/[0.08]">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-5 border-b border-white/[0.08]">
             <div className="flex flex-wrap items-center gap-2">
               <a
                 href="https://ieeexplore.ieee.org/document/11212334"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-violet-950/70 hover:bg-violet-900/80 border border-violet-500/50 hover:border-violet-400 text-xs font-mono text-violet-300 hover:text-white font-semibold shadow-md shadow-violet-500/10 transition-all cursor-pointer group"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-950/70 hover:bg-violet-900/80 border border-violet-500/50 hover:border-violet-400 text-xs font-mono text-violet-300 hover:text-white font-semibold shadow-md shadow-violet-500/10 transition-all cursor-pointer group"
                 title="View published record on IEEE Xplore Digital Library"
               >
-                <Award className="w-4 h-4 text-violet-400 group-hover:scale-110 transition-transform" />
+                <Award className="w-3.5 h-3.5 text-violet-400 group-hover:scale-110 transition-transform" />
                 <span>IEEE Xplore Digital Library · Doc #11212334</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-violet-400" />
               </a>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-xs font-mono text-emerald-300 font-semibold shadow-sm">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-xs font-mono text-emerald-300 font-semibold shadow-sm">
                 <Leaf className="w-3.5 h-3.5 text-emerald-400" />
                 IEEE ICESCS 2025 Conference
               </span>
@@ -65,7 +65,7 @@ export const ResearchPublicationSection: React.FC = () => {
           </div>
 
           {/* Paper Title */}
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-3 leading-snug">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-white mb-2.5 leading-snug">
             GreenMark: A Reward-Based Urban Greening System with Plant Monitoring and Carbon Credit Certification
           </h3>
 
@@ -99,23 +99,23 @@ export const ResearchPublicationSection: React.FC = () => {
               </p>
 
               {/* Action Buttons: Official IEEE Paper and GitHub Repo */}
-              <div className="flex flex-wrap items-center gap-3 pt-3">
+              <div className="flex flex-wrap items-center gap-2.5 pt-2">
                 <a
                   href="https://ieeexplore.ieee.org/document/11212334"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 hover:from-violet-500 hover:to-purple-500 border border-violet-400/40 transition-all duration-200 shadow-xl shadow-purple-600/30 hover:shadow-violet-500/50 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold text-white bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 hover:from-violet-500 hover:to-purple-500 border border-violet-400/40 transition-all duration-200 shadow-xl shadow-purple-600/30 hover:shadow-violet-500/50 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                 >
-                  <BookOpen className="w-4 h-4 text-violet-100" />
+                  <BookOpen className="w-3.5 h-3.5 text-violet-100" />
                   <span>Read Official IEEE Paper</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-violet-100 ml-0.5" />
+                  <ArrowUpRight className="w-3 h-3 text-violet-100 ml-0.5" />
                 </a>
 
                 <a
                   href="https://github.com/Rithi-20/Greenmark"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-violet-500/40 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-mono text-slate-300 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-violet-500/40 transition-all cursor-pointer"
                 >
                   <Github className="w-3.5 h-3.5 text-violet-400" />
                   <span>GitHub Repository</span>
@@ -124,8 +124,8 @@ export const ResearchPublicationSection: React.FC = () => {
             </div>
 
             {/* Key research areas */}
-            <div className="lg:col-span-4 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5 text-xs font-mono">
-              <div className="text-violet-300 font-semibold mb-2 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+            <div className="lg:col-span-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-2 text-xs font-mono">
+              <div className="text-violet-300 font-semibold mb-1.5 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-violet-400" />
                 <span>Methodology Pillars:</span>
               </div>
@@ -153,24 +153,24 @@ export const ResearchPublicationSection: React.FC = () => {
           </div>
 
           {/* Visual Research Flow Pipeline */}
-          <div className="pt-6 border-t border-white/[0.08]">
-            <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-              <FileText className="w-4 h-4 text-violet-400" />
+          <div className="pt-5 border-t border-white/[0.08]">
+            <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+              <FileText className="w-3.5 h-3.5 text-violet-400" />
               <span>End-to-End System Architecture Pipeline</span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2.5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2">
               {pipelineFlow.map((step, idx) => (
                 <div
                   key={idx}
                   data-aos="zoom-in"
                   data-aos-delay={`${200 + idx * 50}`}
-                  className="p-3.5 rounded-xl bg-[#18112b] border border-purple-500/15 hover:border-violet-400/60 hover:shadow-lg hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] flex flex-col justify-between cursor-default group"
+                  className="p-2.5 sm:p-3 rounded-lg bg-[#18112b] border border-purple-500/15 hover:border-violet-400/60 hover:shadow-lg hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] flex flex-col justify-between cursor-default group"
                 >
-                  <div className="text-[10px] font-mono text-violet-400 mb-1">
+                  <div className="text-[10px] font-mono text-violet-400 mb-0.5">
                     0{idx + 1}
                   </div>
-                  <div className="text-xs font-bold text-white mb-1">
+                  <div className="text-xs font-bold text-white mb-0.5">
                     {step.title}
                   </div>
                   <div className="text-[10px] text-slate-400 leading-tight">

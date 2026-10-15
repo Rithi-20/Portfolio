@@ -61,42 +61,42 @@ export const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="pt-16 pb-8 sm:pt-20 sm:pb-10 relative bg-[#0d0917]/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="pt-12 pb-6 sm:pt-14 sm:pb-8 relative bg-[#0d0917]/80">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div data-aos="fade-up" className="flex flex-col mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        <div data-aos="fade-up" className="flex flex-col mb-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
             Who I Am
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
+          <div className="w-10 h-0.5 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-2" />
         </div>
 
         {/* Top Split: Professional Summary on the Left & Quick Info Stack on the Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left: Rich Personal Narrative Card (7 cols) */}
           <div
             data-aos="fade-right"
             data-aos-duration="750"
-            className="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.01] relative overflow-hidden flex flex-col justify-between group cursor-default"
+            className="lg:col-span-7 p-5 sm:p-6 rounded-2xl bg-[#140e24] border border-purple-500/25 hover:border-violet-400/60 shadow-xl hover:shadow-violet-500/20 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.008] relative overflow-hidden flex flex-col justify-between group cursor-default"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-56 h-56 bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
 
             <div>
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-purple-500/15">
-                <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-violet-300 shadow-sm">
-                  <User className="w-5 h-5" />
+              <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-purple-500/15">
+                <div className="w-8 h-8 rounded-lg bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-violet-300 shadow-sm">
+                  <User className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold font-mono text-violet-300 tracking-wider uppercase">
+                  <h3 className="text-sm font-bold font-mono text-violet-300 tracking-wider uppercase">
                     Engineering Ethos & Summary
                   </h3>
-                  <p className="text-xs text-purple-300/70">
+                  <p className="text-[11px] text-purple-300/70">
                     Junior Software Developer @ Fuzionest · B.E. CSE Graduate
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-4 text-purple-100/90 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-3 text-purple-100/90 text-xs sm:text-[13px] leading-relaxed">
                 <p>
                   I build <span className="text-white font-semibold">production-grade AI systems and scalable backend software</span>—not just theoretical experiments in notebooks. I graduated with a <span className="text-violet-300 font-semibold">Bachelor of Engineering in Computer Science</span> from <span className="text-white font-medium">Dr. N.G.P. Institute of Technology</span> (CGPA: <span className="text-violet-400 font-mono font-bold">8.42 / 10</span>).
                 </p>
@@ -106,7 +106,7 @@ export const AboutSection: React.FC = () => {
                 <p>
                   My technical focus lies at the intersection of <span className="text-emerald-400 font-medium">Applied Machine Learning</span>, <span className="text-violet-300 font-medium">RAG Pipelines with FAISS</span>, and <span className="text-purple-300 font-medium">Autonomous Multi-Agent Copilots</span>. I am also the co-author and presenter of the <span className="text-white font-semibold">GreenMark</span> environmental AI project presented at the <span className="text-emerald-400 font-semibold">IEEE ICESCS 2025</span> conference.
                 </p>
-                <p className="text-purple-300/70 text-xs sm:text-sm">
+                <p className="text-purple-300/70 text-[11px] sm:text-xs">
                   I care deeply about clean system architecture, deterministic tool execution, and shipping high-impact software that solves real-world challenges.
                 </p>
               </div>

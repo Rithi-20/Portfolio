@@ -148,18 +148,18 @@ export const ProjectsSection: React.FC = () => {
   const activeProject = filteredProjects[deckIndex] || filteredProjects[0];
 
   return (
-    <section id="projects" className="pt-8 pb-8 sm:pt-10 sm:pb-10 relative bg-[#0c0817]/80">
+    <section id="projects" className="pt-6 pb-6 sm:pt-8 sm:pb-8 relative bg-[#0c0817]/80">
       {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-violet-600/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[450px] bg-violet-600/8 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div data-aos="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div data-aos="fade-up" className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               What I Built
             </h2>
-            <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
+            <div className="w-10 h-0.5 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-2" />
           </div>
 
           {/* View Mode Switcher Toggle */}
@@ -279,27 +279,27 @@ export const ProjectsSection: React.FC = () => {
                   {/* Active 3D Card (Center Stage with 3D Slide Animation & Interactive Tilt) */}
                   <div
                     key={`active-deck-${deckIndex}-${animKey}`}
-                    className={`relative w-full max-w-2xl z-20 ${
+                    className={`relative w-full max-w-xl z-20 ${
                       slideDirection === 'right' ? 'animate-slide-in-right-3d' : 'animate-slide-in-left-3d'
                     }`}
                   >
-                    <Card3DTilt className="p-6 sm:p-8 rounded-2xl bg-[#140e26] border border-violet-500/40 shadow-2xl shadow-purple-950/60">
+                    <Card3DTilt className="p-5 sm:p-6 rounded-xl bg-[#140e26] border border-violet-500/40 shadow-2xl shadow-purple-950/60">
                       {/* Top neon edge light */}
                       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-violet-400 to-transparent" />
 
                       {/* Top Meta Row */}
-                      <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                      <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-mono uppercase tracking-wider text-violet-300 font-semibold">
+                          <span className="text-[11px] font-mono uppercase tracking-wider text-violet-300 font-semibold">
                             {activeProject.category}
                           </span>
                           {activeProject.badge && (
-                            <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-violet-950/80 text-violet-200 border border-violet-700/50">
+                            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-violet-950/80 text-violet-200 border border-violet-700/50">
                               {activeProject.badge}
                             </span>
                           )}
                           {activeProject.conference && (
-                            <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
+                            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
                               {activeProject.conference}
                             </span>
                           )}
@@ -314,11 +314,11 @@ export const ProjectsSection: React.FC = () => {
 
                       {/* Live Interface Screenshot Preview */}
                       {activeProject.imageUrl && (
-                        <div className="relative mb-5 rounded-xl overflow-hidden border border-purple-500/25 group/img bg-[#0a0614]">
+                        <div className="relative mb-4 rounded-lg overflow-hidden border border-purple-500/25 group/img bg-[#0a0614]">
                           <img
                             src={activeProject.imageUrl}
                             alt={`${activeProject.title} Interface Preview`}
-                            className="w-full h-44 sm:h-56 object-cover object-top transition-transform duration-500 group-hover/img:scale-[1.02]"
+                            className="w-full h-36 sm:h-44 object-cover object-top transition-transform duration-500 group-hover/img:scale-[1.02]"
                             loading="lazy"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#140e26] via-transparent to-transparent opacity-30 pointer-events-none" />
@@ -326,7 +326,7 @@ export const ProjectsSection: React.FC = () => {
                       )}
 
                       {/* Title */}
-                      <h3 className="text-xl sm:text-3xl font-extrabold text-white mb-3 group-hover:text-violet-300 transition-colors">
+                      <h3 className="text-lg sm:text-2xl font-extrabold text-white mb-2.5 group-hover:text-violet-300 transition-colors">
                         {activeProject.title}
                       </h3>
 

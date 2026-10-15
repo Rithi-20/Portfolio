@@ -31,26 +31,26 @@ export const ExperienceSection: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-12 sm:py-16 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div data-aos="fade-up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div data-aos="fade-up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               What I Did
             </h2>
-            <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
-            <p className="text-xs sm:text-sm font-mono text-violet-300/80 mt-2">
+            <div className="w-10 h-0.5 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-2" />
+            <p className="text-xs font-mono text-violet-300/80 mt-1.5">
               Click any milestone dot along the route to list detailed responsibilities and achievements
             </p>
           </div>
 
           {/* View Mode Toggle */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[#140e24] border border-purple-500/20 w-fit">
+          <div className="flex items-center gap-1 p-1 rounded-xl bg-[#140e24] border border-purple-500/20 w-fit">
             <button
               type="button"
               onClick={() => setViewMode('spotlight')}
-              className={`px-3 py-1.5 text-xs font-mono rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
+              className={`px-2.5 py-1 text-xs font-mono rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
                 viewMode === 'spotlight'
                   ? 'bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold shadow-md shadow-purple-900/30'
                   : 'text-purple-300/70 hover:text-white'
@@ -62,7 +62,7 @@ export const ExperienceSection: React.FC = () => {
             <button
               type="button"
               onClick={() => setViewMode('timeline')}
-              className={`px-3 py-1.5 text-xs font-mono rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
+              className={`px-2.5 py-1 text-xs font-mono rounded-lg transition-all cursor-pointer flex items-center gap-1.5 ${
                 viewMode === 'timeline'
                   ? 'bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold shadow-md shadow-purple-900/30'
                   : 'text-purple-300/70 hover:text-white'
@@ -75,8 +75,8 @@ export const ExperienceSection: React.FC = () => {
         </div>
 
         {/* Interactive Milestone Route Track (Clickable Dots) */}
-        <div data-aos="fade-up" data-aos-delay="100" className="mb-8 p-5 sm:p-6 rounded-2xl bg-[#140e24] border border-purple-500/20 shadow-xl relative overflow-hidden">
-          <div className="flex items-center justify-between text-xs font-mono text-purple-300/70 mb-5">
+        <div data-aos="fade-up" data-aos-delay="100" className="mb-6 p-4 sm:p-5 rounded-xl bg-[#140e24] border border-purple-500/20 shadow-xl relative overflow-hidden">
+          <div className="flex items-center justify-between text-xs font-mono text-purple-300/70 mb-4">
             <span className="flex items-center gap-1.5 uppercase tracking-wider font-semibold text-violet-300">
               <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
               Milestone Route ({currentIndex + 1} of {EXPERIENCES.length})
@@ -109,7 +109,7 @@ export const ExperienceSection: React.FC = () => {
                 >
                   {/* Glowing Clickable Dot Node */}
                   <div
-                    className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-300 ${
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-300 ${
                       isSelected
                         ? 'bg-gradient-to-br from-violet-300 to-purple-500 text-slate-950 ring-4 ring-violet-400/40 shadow-xl shadow-violet-500/50 scale-110'
                         : 'bg-[#18112b] border border-purple-500/30 text-purple-300 group-hover:border-violet-400/70 group-hover:bg-[#20153b] group-hover:scale-105'
@@ -119,9 +119,9 @@ export const ExperienceSection: React.FC = () => {
                   </div>
 
                   {/* Company and Period Tag below dot */}
-                  <div className="mt-2.5 text-center max-w-[110px] sm:max-w-[160px]">
+                  <div className="mt-2 text-center max-w-[100px] sm:max-w-[150px]">
                     <div
-                      className={`text-xs font-bold transition-colors truncate ${
+                      className={`text-[11px] font-bold transition-colors truncate ${
                         isSelected ? 'text-violet-200' : 'text-slate-400 group-hover:text-purple-200'
                       }`}
                     >
@@ -139,7 +139,7 @@ export const ExperienceSection: React.FC = () => {
 
         {/* View Mode 1: Spotlight Card (Lists the clicked dot's detailed experience) */}
         {viewMode === 'spotlight' && (
-          <div data-aos="fade-up" data-aos-delay="150" className="p-6 sm:p-8 rounded-2xl bg-[#140e24] border border-purple-500/25 shadow-2xl relative overflow-hidden transition-all duration-300 hover:border-violet-400/50">
+          <div data-aos="fade-up" data-aos-delay="150" className="p-5 sm:p-6 rounded-xl bg-[#140e24] border border-purple-500/25 shadow-2xl relative overflow-hidden transition-all duration-300 hover:border-violet-400/50">
             {/* Top metadata row */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-5 border-b border-purple-500/15">
               <div>
@@ -152,10 +152,10 @@ export const ExperienceSection: React.FC = () => {
                     {activeExp.type}
                   </span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
                   {activeExp.role}
                 </h3>
-                <div className="text-base font-semibold text-violet-400 mt-0.5">
+                <div className="text-sm sm:text-base font-semibold text-violet-400 mt-0.5">
                   {activeExp.company}
                 </div>
               </div>
@@ -278,7 +278,7 @@ export const ExperienceSection: React.FC = () => {
                   {/* Experience Card */}
                   <div
                     onClick={() => setSelectedId(exp.id)}
-                    className={`p-6 sm:p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl cursor-pointer ${
+                    className={`p-4.5 sm:p-5 rounded-xl transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.01] hover:shadow-2xl cursor-pointer ${
                       isSelected
                         ? 'bg-[#18112c] border-2 border-violet-400/80 shadow-2xl shadow-violet-950/50 ring-1 ring-violet-400/30'
                         : 'bg-[#140e24] border border-purple-500/20 hover:border-violet-500/50 hover:shadow-violet-500/15'
@@ -287,7 +287,7 @@ export const ExperienceSection: React.FC = () => {
                     {/* Top row */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                       <div>
-                        <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-violet-300 transition-colors">
+                        <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-violet-300 transition-colors">
                           {exp.role}
                         </h3>
                         <div className="text-sm font-medium text-violet-400">

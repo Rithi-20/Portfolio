@@ -169,23 +169,23 @@ export const SkillsSection: React.FC = () => {
       : skillDomains.filter((d) => d.id === selectedDomain);
 
   return (
-    <section id="skills" className="pt-8 pb-16 sm:pt-10 sm:pb-20 relative bg-[#0c0817]/70">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="pt-6 pb-10 sm:pt-8 sm:pb-12 relative bg-[#0c0817]/70">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div data-aos="fade-up" className="flex flex-col mb-8">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        <div data-aos="fade-up" className="flex flex-col mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
             What I Know
           </h2>
-          <div className="w-14 h-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-3" />
+          <div className="w-10 h-0.5 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded mt-2" />
         </div>
 
         {/* Infinite Tech Marquee Row */}
-        <div data-aos="fade-up" data-aos-delay="100" className="overflow-hidden py-3 mb-10 border-y border-purple-500/15 bg-black/30">
-          <div className="animate-marquee gap-3">
+        <div data-aos="fade-up" data-aos-delay="100" className="overflow-hidden py-2.5 mb-8 border-y border-purple-500/15 bg-black/30">
+          <div className="animate-marquee gap-2.5">
             {[...marqueeSkills, ...marqueeSkills].map((tech, idx) => (
               <span
                 key={idx}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-mono font-medium whitespace-nowrap bg-white/[0.02] border border-purple-500/15 text-purple-200 hover:text-violet-200 hover:border-violet-500/50 hover:bg-violet-950/40 transition-all duration-150"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium whitespace-nowrap bg-white/[0.02] border border-purple-500/15 text-purple-200 hover:text-violet-200 hover:border-violet-500/50 hover:bg-violet-950/40 transition-all duration-150"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
                 <span>{tech}</span>
@@ -195,11 +195,11 @@ export const SkillsSection: React.FC = () => {
         </div>
 
         {/* Domain Filter Pills */}
-        <div data-aos="fade-up" data-aos-delay="150" className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <div data-aos="fade-up" data-aos-delay="150" className="flex items-center gap-1.5 overflow-x-auto pb-3 mb-6 scrollbar-none">
           <button
             type="button"
             onClick={() => setSelectedDomain('all')}
-            className={`px-3.5 py-1.5 text-xs font-mono rounded-lg whitespace-nowrap transition-all duration-150 cursor-pointer ${
+            className={`px-3 py-1 text-xs font-mono rounded-lg whitespace-nowrap transition-all duration-150 cursor-pointer ${
               selectedDomain === 'all'
                 ? 'bg-violet-500/20 text-violet-200 border border-violet-500/50 shadow-sm shadow-violet-500/20'
                 : 'text-purple-300/70 hover:text-white bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10'
@@ -214,7 +214,7 @@ export const SkillsSection: React.FC = () => {
                 key={domain.id}
                 type="button"
                 onClick={() => setSelectedDomain(domain.id)}
-                className={`px-3.5 py-1.5 text-xs font-mono rounded-lg whitespace-nowrap transition-all duration-150 cursor-pointer ${
+                className={`px-3 py-1 text-xs font-mono rounded-lg whitespace-nowrap transition-all duration-150 cursor-pointer ${
                   isActive
                     ? 'bg-violet-500/20 text-violet-200 border border-violet-500/50 shadow-sm shadow-violet-500/20'
                     : 'text-purple-300/70 hover:text-white bg-white/[0.02] hover:bg-white/[0.05] border border-purple-500/10'
@@ -227,7 +227,7 @@ export const SkillsSection: React.FC = () => {
         </div>
 
         {/* Grouped Skills Domain Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
           {filteredDomains.map((domain, dIdx) => {
             const Icon = domain.icon;
 
@@ -236,41 +236,41 @@ export const SkillsSection: React.FC = () => {
                 key={domain.id}
                 data-aos="fade-up"
                 data-aos-delay={`${150 + dIdx * 100}`}
-                className={`p-6 sm:p-7 rounded-2xl bg-[#140e24] border ${domain.borderColor} transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-1.5 flex flex-col justify-between cursor-default`}
+                className={`p-4.5 sm:p-5 rounded-xl bg-[#140e24] border ${domain.borderColor} transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-violet-500/20 hover:-translate-y-1 flex flex-col justify-between cursor-default`}
               >
                 <div>
                   {/* Category Header */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-3 border-b border-purple-500/15">
-                    <div className="flex items-center gap-3">
-                      <div className={`p-2.5 rounded-xl bg-white/[0.03] border border-purple-500/15 ${domain.accentColor}`}>
-                        <Icon className="w-5 h-5" />
+                  <div className="flex flex-wrap items-center justify-between gap-2.5 mb-3.5 pb-2.5 border-b border-purple-500/15">
+                    <div className="flex items-center gap-2.5">
+                      <div className={`p-2 rounded-lg bg-white/[0.03] border border-purple-500/15 ${domain.accentColor}`}>
+                        <Icon className="w-4 h-4" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className={`text-[11px] font-mono font-semibold px-2 py-0.5 rounded border ${domain.badgeBg}`}>
+                          <span className={`text-[10px] font-mono font-semibold px-2 py-0.5 rounded border ${domain.badgeBg}`}>
                             {domain.prefix}
                           </span>
-                          <h3 className="text-base sm:text-lg font-bold text-white">
+                          <h3 className="text-sm sm:text-base font-bold text-white">
                             {domain.title}
                           </h3>
                         </div>
-                        <p className="text-xs text-purple-300/70 mt-0.5">
+                        <p className="text-[11px] text-purple-300/70 mt-0.5">
                           {domain.subtitle}
                         </p>
                       </div>
                     </div>
 
-                    <span className="text-xs font-mono text-purple-400/60 hidden sm:inline-block">
+                    <span className="text-[11px] font-mono text-purple-400/60 hidden sm:inline-block">
                       {domain.skills.length} Skills
                     </span>
                   </div>
 
                   {/* Skills Tag Badges Properly Aligned */}
-                  <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1">
+                  <div className="flex flex-wrap items-center gap-2 pt-0.5">
                     {domain.skills.map((skill, sIdx) => (
                       <div
                         key={sIdx}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/[0.025] hover:bg-violet-950/40 border border-purple-500/15 hover:border-violet-400/50 hover:shadow-md hover:shadow-violet-500/20 text-xs sm:text-sm font-mono font-medium text-purple-100 hover:text-white transition-all duration-200 hover:-translate-y-0.5 cursor-default group"
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-white/[0.025] hover:bg-violet-950/40 border border-purple-500/15 hover:border-violet-400/50 hover:shadow-sm hover:shadow-violet-500/20 text-xs font-mono font-medium text-purple-100 hover:text-white transition-all duration-200 hover:-translate-y-0.5 cursor-default group"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-violet-400 opacity-80 group-hover:opacity-100 group-hover:scale-125 group-hover:bg-violet-300 transition-all flex-shrink-0" />
                         <span>{skill}</span>
